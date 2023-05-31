@@ -1,0 +1,11 @@
+areas = []
+yields = []
+for i in range(10):
+  area = float(input("Введите площадь, засеянную пшеницей в районе {}: ".format(i+1)))
+  areas.append(area)
+  yield_per_hectare = float(input("Введите среднюю урожайность в районе {}: ".format(i+1)))
+  yields.append(yield_per_hectare)
+total_wheat = sum(areas) * sum(yields)
+average_yield = sum(yields) / len(yields)
+print("Количество пшеницы, собранное в области:", total_wheat)
+print("Средняя урожайность по области:", average_yield)

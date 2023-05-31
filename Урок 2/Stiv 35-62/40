@@ -1,0 +1,13 @@
+noise_level = int(input("Введите уровень шума в децибелах: "))
+if noise_level < 40:
+    print("Это тихая комната")
+elif noise_level >= 40 and noise_level < 70:
+    print("Это будильник")
+elif noise_level >= 70 and noise_level < 106:
+    print("Это обычный разговор")
+elif noise_level >= 106 and noise_level < 130:
+    print("Это газонокосилка")
+elif noise_level >= 130:
+    print("Это отбойный молоток")
+else:
+    print("Введенное значение не соответствует таблице. Уровень шума находится между источниками звука.")

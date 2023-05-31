@@ -1,0 +1,7 @@
+n = int(input())
+a_k = 1
+print("Последовательность a0, a1, ..., an:")
+print(a_k)
+for k in range(1, n+1):
+  a_k = k*a_k + 1/k
+  print(a_k)

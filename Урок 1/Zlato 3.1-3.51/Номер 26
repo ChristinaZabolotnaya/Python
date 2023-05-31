@@ -1,0 +1,9 @@
+n = input("Введите трехзначное число, в котором все цифры различны - ")
+r = []
+for i in range(3):
+    for j in range(3):
+        for k in range(3):
+            if i != j and j != k and i != k:
+                new_n = int(n[i] + n[j] + n[k])
+                r.append(new_n)
+print(f"Числа, образованные при перестановке цифр заданного числа - {r}")

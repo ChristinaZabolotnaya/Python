@@ -1,0 +1,39 @@
+import os
+
+start_year = int(input("Введите начальный год: "))
+end_year = int(input("Введите конечный год: "))
+
+boys_names = {}
+girls_names = {}
+
+for year in range(start_year, end_year+1):
+    boys_filename = f"yob{year}.txt"
+    girls_filename = f"yob{year}f.txt"
+    if os.path.isfile(boys_filename):
+        with open(boys_filename, 'r') as f:
+            for line in f:
+                data = line.strip().split(',')
+                name = data[0]
+                count = int(data[2])
+                if count > 0:
+                    if name not in boys_names:
+                        boys_names[name] = count
+                    else:
+                        boys_names[name] += count
+    if os.path.isfile(girls_filename):
+        with open(girls_filename, 'r') as f:
+            for line in f:
+                data = line.strip().split(',')
+                name = data[0]
+                count = int(data[2])
+                if count > 0:
+                    if name not in girls_names:
+                        girls_names[name] = count
+                    else:
+                        girls_names[name] += count
+
+most_popular_boys_name = max(boys_names, key=boys_names.get)
+most_popular_girls_name = max(girls_names, key=girls_names.get)
+
+print(f"Самое популярное мужское имя в период с {start_year} по {end_year}: {most_popular_boys_name}")
+print(f"Самое популярное женское имя в период с {start_year} по {end_year}: {most_popular_girls_name}")

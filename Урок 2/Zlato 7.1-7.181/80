@@ -1,0 +1,21 @@
+results = []
+for i in range(20):
+  goals_scored = int(input(f"Введите количество забитых мячей в игре {i+1}: "))
+  goals_conceded = int(input(f"Введите количество пропущенных мячей в игре {i+1}: "))
+  if goals_scored > goals_conceded:
+    result = "выигрыш"
+  elif goals_scored == goals_conceded:
+    result = "ничья"
+  else:
+    result = "проигрыш"
+  results.append(result)
+count_wins = results.count("выигрыш")
+count_losses = results.count("проигрыш")
+count_draws = results.count("ничья")
+print("Количество выигрышей:", count_wins)
+print("Количество проигрышей:", count_losses)
+print("Количество ничьих:", count_draws)
+count_goal_diff_3_or_more = sum(1 for i in range(20) if abs(int(input(f"Введите разницу мячей в игре {i+1}: "))) >= 3)
+print("Количество игр с разницей в 3 или более мячей:", count_goal_diff_3_or_more)
+total_points = count_wins*3 + count_draws
+print("Общее количество очков:", total_points)

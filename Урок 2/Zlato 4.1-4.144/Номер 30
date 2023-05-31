@@ -1,0 +1,5 @@
+num = int(input("Введите число num - "))
+if str(num) == str(num)[::-1]:
+  print(num, "является палиндромом.")
+else:
+  print(num, "не является палиндромом.")

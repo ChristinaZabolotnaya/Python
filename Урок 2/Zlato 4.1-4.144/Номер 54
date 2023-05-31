@@ -1,0 +1,10 @@
+num = input("Введите четырехзначное число - ")
+if '4' in num:
+  print("Цифра 4 есть в номере.")
+else:
+  print("Цифры 4 нет в номере.")
+digit = input("Введите число - ")
+if digit in num:
+  print(f"Цифра {digit} есть в номере.")
+else:
+  print(f"Цифра {digit} нет в номере.")

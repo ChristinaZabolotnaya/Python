@@ -1,0 +1,16 @@
+total_price = 0
+while True:
+    age_str = input("Введите возраст посетителя (пустая строка для окончания ввода): ")
+    if age_str == "":
+        break
+    else:
+        age = int(age_str)
+        if age < 2:
+            price = 0
+        elif age < 3 or age > 65:
+            price = 23
+        else:
+            price = 14
+        total_price += price
+
+print(f"Общая цена билетов: {total_price:.2f}")

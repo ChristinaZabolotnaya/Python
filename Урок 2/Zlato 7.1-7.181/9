@@ -1,0 +1,10 @@
+grades = []
+for i in range(2):
+  student_grades = []
+  for j in range(4):
+    grade = int(input("Введите оценку ученика за предмет: "))
+    student_grades.append(grade)
+  grades.append(student_grades)
+total_grades = [sum(student_grades) for student_grades in grades]
+print("Сумма оценок первого ученика равна", total_grades[0])
+print("Сумма оценок второго ученика равна", total_grades[1])

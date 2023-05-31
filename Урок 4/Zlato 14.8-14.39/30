@@ -1,0 +1,10 @@
+def is_palindrome(num):
+    return str(num) == str(num)[::-1]
+
+num1 = int(input("Введите первое натуральное число: "))
+num2 = int(input("Введите второе натуральное число: "))
+
+if is_palindrome(num1) or is_palindrome(num2):
+    print("Хотя бы одно число является палиндромом")
+else:
+    print("Ни одно число не является палиндромом")

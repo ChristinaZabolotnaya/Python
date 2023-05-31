@@ -1,0 +1,13 @@
+e = float(input('е ='))
+f = float(input('f ='))
+g = float(input('g ='))
+h = float(input('h ='))
+from math import sqrt, sin
+cha = e + f / 2 
+k = (g - h) ** 2 - 3 * sin(e) 
+if k >= 0:
+    print('a =', cha / 3)
+    print('b =', abs(h ** 2 - g))
+    print('c =', sqrt(k))
+else:
+    print('Ошибка')

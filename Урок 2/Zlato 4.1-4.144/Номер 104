@@ -1,0 +1,6 @@
+a = float(input())
+b = float(input())
+abs_sum = abs(a) + abs(b)
+abs_prod_sqrt = (abs(a) * abs(b)) ** 0.5
+print("Полусумма абсолютных величин:", abs_sum / 2)
+print("Квадратный корень из произведения абсолютных величин:", abs_prod_sqrt)

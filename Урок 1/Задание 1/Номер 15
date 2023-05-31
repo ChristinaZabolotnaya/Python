@@ -1,0 +1,4 @@
+R = int(input('R ='))
+r = int(input('r ='))
+from math import pi
+print('S =', pi * (R ** 2 - r ** 2))

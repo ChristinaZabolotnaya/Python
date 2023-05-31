@@ -1,0 +1,12 @@
+teams = []
+while True:
+  name = input("Введите название команды ('стоп' для завершения ввода): ")
+  if name == 'стоп':
+    break
+  score = int(input("Введите количество очков: "))
+  teams.append((name, score))
+is_sorted = all(teams[i][1] >= teams[i+1][1] for i in range(len(teams)-1))
+if is_sorted:
+  print("Команды перечислены в соответствии с занятыми ими местами в чемпионате.")
+else:
+  print("Команды не перечислены в соответствии с занятыми ими местами в чемпионате.")

@@ -1,0 +1,13 @@
+import math
+a = float(input("Enter the angle of the projectile in degrees: "))
+v0 = float(input("Enter the initial velocity of the projectile: "))
+R = float(input("Enter the distance to the target: "))
+H = float(input("Enter the height of the target: "))
+g = 9.8
+a_rad = math.radians(a)
+t = R / (v0 * math.cos(a_rad))
+y = v0 * t * math.sin(a_rad) - 0.5 * g * t**2
+if y <= H:
+  print("The projectile will hit the target.")
+else:
+  print("The projectile will miss the target.")

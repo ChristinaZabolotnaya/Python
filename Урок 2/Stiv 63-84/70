@@ -1,0 +1,9 @@
+while True:
+    bits_str = input("Введите 8 бит (пустая строка для окончания ввода): ")
+    if bits_str == "":
+        break
+    elif len(bits_str) != 8 or not all([b in "01" for b in bits_str]):
+        print("Ошибка: нужно ввести ровно 8 символов, состоящих из 0 и 1")
+    else:
+        parity_bit = str(sum([int(b) for b in bits_str]) % 2)
+        print(f"Бит четности для введенной группы: {parity_bit}")

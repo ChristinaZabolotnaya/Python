@@ -1,0 +1,8 @@
+age_mity = int(input())
+age_vasya = int(input())
+if age_mity > age_vasya:
+  print("Митя старше Васи")
+elif age_mity < age_vasya:
+  print("Вася старше Мити")
+else:
+  print("Митя и Вася одного возраста")

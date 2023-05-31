@@ -1,0 +1,7 @@
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+sum_four = 0
+for i in range(a, b+1):
+  if i % 4 == 0:
+    sum_four += i
+print(sum_four)

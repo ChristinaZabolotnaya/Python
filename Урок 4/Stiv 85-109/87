@@ -1,0 +1,11 @@
+def delivery_cost(num_items):
+    base_cost = 10.95
+    additional_cost = max(num_items - 1, 0) * 2.95
+    total_cost = base_cost + additional_cost
+    return total_cost
+
+num_items = int(input("Введите количество товаров в заказе: "))
+
+cost = delivery_cost(num_items)
+
+print("Стоимость доставки:", cost)

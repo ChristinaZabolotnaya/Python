@@ -1,0 +1,8 @@
+sequence = []
+while True:
+  num = float(input("Введите число (для завершения введите 1000): "))
+  if num == 1000:
+    break
+  sequence.append(num)
+consecutive_equals = sum(1 for i in range(len(sequence)-1) if sequence[i] == sequence[i+1])
+print(f"Количество чисел, идущих подряд и равных между собой: {consecutive_equals}")

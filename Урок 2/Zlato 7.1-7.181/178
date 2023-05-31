@@ -1,0 +1,4 @@
+numbers = list(map(int, input("Введите числа: ").split()))
+max_num = max(numbers)
+min_num = min(numbers)
+print(f"Количество максимальных элементов: {numbers.count(max_num)}, количество минимальных элементов: {numbers.count(min_num)}")

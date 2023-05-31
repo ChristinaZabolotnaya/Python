@@ -1,0 +1,17 @@
+def count_letter(sentence, letter):
+    count = 0
+    for char in sentence:
+        if char == letter:
+            count += 1
+    return count
+
+sentence1 = input("Введите первое предложение: ")
+sentence2 = input("Введите второе предложение: ")
+sentence3 = input("Введите третье предложение: ")
+letter = input("Введите букву для подсчета: ")
+
+count1 = count_letter(sentence1, letter)
+count2 = count_letter(sentence2, letter)
+count3 = count_letter(sentence3, letter)
+
+print("Общее количество букв", letter, "в трех предложениях:", count1 + count2 + count3)

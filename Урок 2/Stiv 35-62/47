@@ -1,0 +1,37 @@
+day = int(input("Введите день: "))
+month = input("Введите месяц: ")
+
+if month == "март":
+    if day >= 20:
+        season = "весна"
+    else:
+        season = "зима"
+elif month == "апрель" or month == "май":
+    season = "весна"
+elif month == "июнь":
+    if day >= 21:
+        season = "лето"
+    else:
+        season = "весна"
+elif month == "июль" or month == "август":
+    season = "лето"
+elif month == "сентябрь":
+    if day >= 22:
+        season = "осень"
+    else:
+        season = "лето"
+elif month == "октябрь" or month == "ноябрь":
+    season = "осень"
+elif month == "декабрь":
+    if day >= 21:
+        season = "зима"
+    else:
+        season = "осень"
+elif month == "январь" or month == "февраль":
+    season = "зима"
+else:
+    print("Некорректный месяц")
+    season = None
+
+if season:
+    print(f"Дата {day} {month} относится к сезону {season}")

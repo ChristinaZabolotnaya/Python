@@ -1,0 +1,6 @@
+temperatures = []
+for i in range(31):
+  temperature = int(input(f"Введите температуру воздуха {i+1} числа: "))
+  temperatures.append(temperature)
+count_below_zero = sum(1 for temperature in temperatures if temperature < 0)
+print("Количество раз, когда температура опускалась ниже 0°C:", count_below_zero)

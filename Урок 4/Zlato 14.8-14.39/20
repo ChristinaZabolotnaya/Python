@@ -1,0 +1,28 @@
+def has_real_roots(a, b, c):
+    discriminant = b**2 - 4*a*c
+    return discriminant >= 0
+
+eq1_a = float(input("Введите значение a для первого уравнения: "))
+eq1_b = float(input("Введите значение b для первого уравнения: "))
+eq1_c = float(input("Введите значение c для первого уравнения: "))
+
+eq2_a = float(input("Введите значение a для второго уравнения: "))
+eq2_b = float(input("Введите значение b для второго уравнения: "))
+eq2_c = float(input("Введите значение c для второго уравнения: "))
+
+eq3_a = float(input("Введите значение a для третьего уравнения: "))
+eq3_b = float(input("Введите значение b для третьего уравнения: "))
+eq3_c = float(input("Введите значение c для третьего уравнения: "))
+
+count = 0
+
+if has_real_roots(eq1_a, eq1_b, eq1_c):
+    count += 1
+
+if has_real_roots(eq2_a, eq2_b, eq2_c):
+    count += 1
+
+if has_real_roots(eq3_a, eq3_b, eq3_c):
+    count += 1
+
+print("Количество уравнений с вещественными корнями:", count)

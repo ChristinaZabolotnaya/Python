@@ -1,0 +1,10 @@
+a = float(input("Введите число a: "))
+for n in range(2, 100):
+    flag = True
+    for i in range(n+1, 100):
+        num = 1 + 1/i
+        if num < a:
+            flag = False
+            break
+    if flag:
+        print(n)

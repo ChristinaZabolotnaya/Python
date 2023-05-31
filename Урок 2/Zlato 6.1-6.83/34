@@ -1,0 +1,6 @@
+t = int(input("Введите число t: "))
+p = int(input("Введите число p: "))
+
+for i in range(t-p, t, t):
+  if i % t == 0 and i % p == 0:
+    print(i)

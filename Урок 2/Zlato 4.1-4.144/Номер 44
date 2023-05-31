@@ -1,0 +1,8 @@
+x = float(input("Введите координату x - "))
+y = float(input("Введите координату у - "))
+if -1 <= x <= 5 and y != float('inf') and y != float('-inf'):
+  print("Точка находится в области I.")
+elif y != float('inf') and y != float('-inf'):
+  print("Точка находится в области III.")
+else:
+  print("Дело не в области ни I, ни III.")

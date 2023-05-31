@@ -1,0 +1,7 @@
+t = float(input())
+if t % 6 < 3:
+  print("Зеленый")
+elif t % 6 < 4:
+  print("Желтый")
+else:
+  print("Красный")

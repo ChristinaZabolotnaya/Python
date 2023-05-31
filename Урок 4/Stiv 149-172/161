@@ -1,0 +1,32 @@
+elements = {}
+filename = input("Введите имя файла: ")
+
+try:
+    with open(filename, 'r') as f:
+        for line in f:
+            data = line.strip().split(',')
+            elements[data[1]] = {'symbol': data[0], 'name': data[2], 'protons': int(data[3])}
+
+    while True:
+        user_input = input("Введите обозначение или название элемента: ")
+        if not user_input:
+            break
+        try:
+            protons = int(user_input)
+            for element in elements.values():
+                if element['protons'] == protons:
+                    print(element['symbol'], element['name'])
+        except ValueError:
+            if user_input in elements:
+                print(elements[user_input]['symbol'], elements[user_input]['name'])
+            else:
+                found = False
+                for element in elements.values():
+                    if user_input.lower() in element['name'].lower():
+                        print(element['symbol'], element['name'], element['protons'])
+                        found = True
+                if not found:
+                    print("Элемент не найден")
+
+except FileNotFoundError:
+    print("Файл не найден")

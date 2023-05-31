@@ -1,0 +1,22 @@
+n = int(input("Введите количество чисел: "))
+numbers = list(map(int, input("Введите числа: ").split()))
+
+# а)
+max_sum = max(numbers[i]+numbers[i+1] for i in range(n-1))
+max_sum_indexes = [i for i in range(n-1) if numbers[i]+numbers[i+1] == max_sum]
+print(f"Максимальная сумма двух соседних чисел равна {max_sum} и достигается между числами под номерами {max_sum_indexes[0]} и {max_sum_indexes[0]+1}")
+
+# б)
+min_sum = min(numbers[i]+numbers[i+1] for i in range(n-1))
+min_sum_indexes = [i for i in range(n-1) if numbers[i]+numbers[i+1] == min_sum]
+print(f"Минимальная сумма двух соседних чисел равна {min_sum} и достигается между числами под номерами {min_sum_indexes[-1]} и {min_sum_indexes[-1]+1}")
+
+# в)
+max_pair_sum = max(numbers[i]+numbers[i+1] for i in range(n-1))
+max_pair_indexes = [i for i in range(n-1) if numbers[i]+numbers[i+1] == max_pair_sum]
+print(f"Максимальная сумма двух соседних чисел равна {max_pair_sum} и достигается между числами под номерами {max_pair_indexes[0]} и {max_pair_indexes[0]+1}")
+
+# г)
+min_pair_sum = min(numbers[i]+numbers[i+1] for i in range(n-1))
+min_pair_indexes = [i for i in range(n-1) if numbers[i]+numbers[i+1] == min_pair_sum]
+print(f"Минимальная сумма двух соседних чисел равна {min_pair_sum} и достигается между числами под номерами {min_pair_indexes[-1]} и {min_pair_indexes[-1]+1}")

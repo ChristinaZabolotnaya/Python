@@ -1,0 +1,25 @@
+x1 = int(input("Enter the x-coordinate of the lower left corner of the first rectangle: "))
+y1 = int(input("Enter the y-coordinate of the lower left corner of the first rectangle: "))
+w1 = int(input("Enter the width of the first rectangle: "))
+h1 = int(input("Enter the height of the first rectangle: "))
+x2 = int(input("Enter the x-coordinate of the lower left corner of the second rectangle: "))
+y2 = int(input("Enter the y-coordinate of the lower left corner of the second rectangle: "))
+w2 = int(input("Enter the width of the second rectangle: "))
+h2 = int(input("Enter the height of the second rectangle: "))
+if x2 <= x1 <= x2+w2 and y2 <= y1 <= y2+h2 and x2 <= x1+w1 <= x2+w2 and y2 <= y1+h1 <= y2+h2:
+  print("All points of the first rectangle are inside the second rectangle.")
+else:
+  print("Not all points of the first rectangle are inside the second rectangle.")
+if x2 <= x1 <= x2+w2 and y2 <= y1 <= y2+h2 and x2 <= x1+w1 <= x2+w2 and y2 <= y1+h1 <= y2+h2:
+  print("All points of the first rectangle are inside the second rectangle.")
+elif x1 <= x2 <= x1+w1 and y1 <= y2 <= y1+h1 and x1 <= x2+w2 <= x1+w1 and y1 <= y2+h2 <= y1+h1:
+  print("All points of the second rectangle are inside the first rectangle.")
+else:
+  print("Not all points of one rectangle are inside the other rectangle.")
+if x2 <= x1 <= x2+w2 or x2 <= x1+w1 <= x2+w2:
+  if y2 <= y1 <= y2+h2 or y2 <= y1+h1 <= y2+h2:
+    print("The rectangles intersect.")
+  elif y1 <= y2 <= y1+h1 or y1 <= y2+h2 <= y1+h1:
+    print("The rectangles intersect.")
+else:
+  print("The rectangles do not intersect.")

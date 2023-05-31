@@ -1,0 +1,5 @@
+a = float(input())
+b = float(input())
+c = float(input())
+sum_two_largest = (a + b + c) - min(a, b, c)
+print("Сумма двух наибольших чисел -", sum_two_largest)

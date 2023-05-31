@@ -1,0 +1,10 @@
+k = int(input("Введите натуральное число k: "))
+sequence = []
+for i in range(k):
+  sequence.append(int(input(f"Введите число b{i+1}: ")))
+last_index = None
+for i in range(k-1, -1, -1):
+  if sequence[i] < 0:
+    last_index = i+1
+    break
+print(f"Номер последнего отрицательного числа: {last_index}")

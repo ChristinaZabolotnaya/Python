@@ -1,0 +1,4 @@
+a = float(input('Длина стороны = '))
+n = int(input('Сколько сторон в многоугольнике? '))
+from math import tan, pi
+print('Площадь =', n * a * a / (4 * tan(pi / n)))

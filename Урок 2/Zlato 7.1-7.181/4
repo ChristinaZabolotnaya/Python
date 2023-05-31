@@ -1,0 +1,7 @@
+masses = []
+n = int(input("Введите количество предметов: "))
+for i in range(n):
+  mass = float(input("Введите массу предмета: "))
+  masses.append(mass)
+total_mass = sum(masses)
+print("Общая масса груза равна", total_mass)

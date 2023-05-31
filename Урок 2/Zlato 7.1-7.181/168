@@ -1,0 +1,8 @@
+n = int(input("Введите количество людей: "))
+ages = list(map(int, input("Введите возраст каждого человека: ").split()))
+oldest_index = ages.index(max(ages))
+youngest_index = ages.index(min(ages))
+if oldest_index < youngest_index:
+  print(f"В списке раньше указан самый старший человек (возраст {max(ages)})")
+else:
+  print(f"В списке раньше указан самый молодой человек (возраст {min(ages)})")

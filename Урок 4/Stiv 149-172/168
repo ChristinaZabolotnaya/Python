@@ -1,0 +1,16 @@
+import sys
+
+if len(sys.argv) < 2:
+    print("Необходимо указать имя файла для проверки")
+else:
+    filename = sys.argv[1]
+    try:
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+            for i in range(len(lines)):
+                words = lines[i].strip().lower().split()
+                for j in range(len(words)-1):
+                    if words[j] == words[j+1]:
+                        print(f"Ошибка: дублирующееся слово '{words[j]}' найдено в строке {i+1}")
+    except FileNotFoundError:
+        print(f"Ошибка: файл '{filename}' не найден")

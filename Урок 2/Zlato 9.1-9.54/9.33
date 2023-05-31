@@ -1,0 +1,6 @@
+for i in range(1, 50000):
+    sum_divisors_i = sum(j for j in range(1, i) if i % j == 0)
+    for k in range(i+1, 50000):
+        sum_divisors_k = sum(j for j in range(1, k) if k % j == 0)
+        if sum_divisors_i == k and sum_divisors_k == i:
+            print(i, k)

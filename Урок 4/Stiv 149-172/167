@@ -1,0 +1,17 @@
+import sys
+
+if len(sys.argv) < 2:
+    print("Необходимо указать имя файла для проверки")
+else:
+    filename = sys.argv[1]
+    try:
+        with open(filename, 'r') as f:
+            dictionary = set(line.strip().lower() for line in f)
+        with open(filename, 'r') as f:
+            for line in f:
+                words = line.strip().lower().split()
+                for word in words:
+                    if word not in dictionary:
+                        print(f"Ошибка: слово '{word}' не найдено в словаре")
+    except FileNotFoundError:
+        print(f"Ошибка: файл '{filename}' не найден")

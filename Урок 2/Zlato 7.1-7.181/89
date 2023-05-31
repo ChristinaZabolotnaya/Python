@@ -1,0 +1,11 @@
+t = int(input("Введите количество чисел: "))
+a = []
+for i in range(t):
+  a.append(int(input(f"Введите число a{i+1}: ")))
+ai = int(input("Введите число ai: "))
+p = int(input("Введите целое число p: "))
+count_multiples = sum(1 for num in a if num > ai and num % p == 0)
+if count_multiples > 0:
+  print("Количество чисел, больших ai и кратных p:", count_multiples)
+else:
+  print("В заданном наборе нет чисел, больших ai и кратных p")

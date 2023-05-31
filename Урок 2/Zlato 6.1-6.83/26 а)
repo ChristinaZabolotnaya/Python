@@ -1,0 +1,1 @@
+print(list(range(13, 100, 13)))

@@ -1,0 +1,3 @@
+m = float(input('Ваш вес в килограммах = '))
+h = float(input('Ваш рост в метрах = '))
+print('BMI =', m / h ** 2)

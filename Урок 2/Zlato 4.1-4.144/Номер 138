@@ -1,0 +1,9 @@
+m = int(input())
+if m == 1:
+  print("Пики")
+elif m == 2:
+  print("Трефы")
+elif m == 3:
+  print("Бубны")
+else:
+  print("Червы")

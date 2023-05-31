@@ -1,0 +1,6 @@
+grades = []
+for i in range(20):
+  grade = int(input("Введите оценку по алгебре: "))
+  grades.append(grade)
+average = sum(grades) / len(grades)
+print("Средняя оценка по алгебре:", average)

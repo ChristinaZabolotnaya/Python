@@ -1,0 +1,4 @@
+n = int(input("Введите натуральное число: "))
+max_digit = max(str(n))
+count_max = str(n).count(max_digit)
+print("Максимальная цифра встречается", count_max, "раз(а)")

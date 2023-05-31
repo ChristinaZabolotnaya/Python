@@ -1,0 +1,5 @@
+k = int(input("Enter a day number between 1 and 365: "))
+if k % 7 == 6 or k % 7 == 0:
+  print("Day", k, "is a weekend day.")
+else:
+  print("Day", k, "is a work day.")

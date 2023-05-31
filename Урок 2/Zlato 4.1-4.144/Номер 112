@@ -1,0 +1,11 @@
+a = int(input())
+b = int(input())
+c = int(input())
+pos_sum = 0
+if a > 0:
+  pos_sum += a
+if b > 0:
+  pos_sum += b
+if c > 0:
+  pos_sum += c
+print("Сумма положительных чисел:", pos_sum)

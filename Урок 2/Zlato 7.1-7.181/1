@@ -1,0 +1,5 @@
+sum = 0
+for i in range(10):
+  a = int(input("Введите число: "))
+  sum += a
+print("Сумма чисел равна", sum)

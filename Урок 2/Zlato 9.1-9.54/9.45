@@ -1,0 +1,6 @@
+t = int(input("Введите t: "))
+p = int(input("Введите p: "))
+for i in range(1, p):
+    digit_sum = sum(int(digit) for digit in str(i))
+    if digit_sum ** 2 == t:
+        print(i)

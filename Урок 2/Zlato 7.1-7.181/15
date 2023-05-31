@@ -1,0 +1,8 @@
+numbers = []
+for i in range(10):
+  number = float(input("Введите число: "))
+  numbers.append(number)
+if sum(numbers) > 100.78:
+  print("Сумма чисел превышает 100,78")
+else:
+  print("Сумма чисел не превышает 100,78")

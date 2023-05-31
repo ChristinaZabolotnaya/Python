@@ -1,0 +1,5 @@
+sequence = []
+for i in range(10):
+  sequence.append(int(input(f"Введите число {i+1}: ")))
+count = sum(1 for i in range(1, len(sequence)-1) if sequence[i] > sequence[i-1] and sequence[i] > sequence[i+1])
+print("Количество строгих локальных максимумов в последовательности:", count)

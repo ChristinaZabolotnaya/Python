@@ -1,0 +1,10 @@
+resistance_1 = int(input("Введите число resistance_1 - "))
+resistance_2 = int(input("Введите число resistance_2 -  "))
+voltage_1 = int(input("Введите число voltage_1 - "))
+voltage_2 = int(input("Введите число voltage_2 -  "))
+current_1 = voltage_1 / resistance_1 
+current_2 = voltage_2 / resistance_2 
+if current_1 < current_2:
+  print("Меньший ток протекает через первую часть цепи")
+else:
+  print("Меньший ток протекает по второй части цепи")

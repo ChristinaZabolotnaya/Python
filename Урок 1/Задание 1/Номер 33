@@ -1,0 +1,6 @@
+x = int(input('Tatiana = '))
+y = int(input('Mitia = '))
+s = (x + y) / 2
+print('Sr = ', s)
+print('Tatiana ot Sr = ', abs(s - x) )
+print('Mitia ot Sr = ', abs(s - y) )

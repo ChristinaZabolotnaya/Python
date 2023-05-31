@@ -1,0 +1,17 @@
+sequence = input("Введите последовательность из нулей и единиц: ")
+zeros_lengths = []
+current_length = 0
+for digit in sequence:
+  if digit == "0":
+    current_length += 1
+  else:
+    if current_length > 0:
+      zeros_lengths.append(current_length)
+    current_length = 0
+if current_length > 0:
+  zeros_lengths.append(current_length)
+if len(zeros_lengths) == 0:
+  print("В последовательности нет ни одного нуля")
+else:
+  min_length = min(zeros_lengths)
+  print(f"Наименьшая длина отрезка с нулями: {min_length}")

@@ -1,0 +1,12 @@
+age_class1 = []
+age_class2 = []
+for i in range(20):
+  age = float(input("Введите возраст ученика класса 1: "))
+  age_class1.append(age)
+for i in range(20):
+  age = float(input("Введите возраст ученика класса 2: "))
+  age_class2.append(age)
+average_age_class1 = sum(age_class1) / len(age_class1)
+average_age_class2 = sum(age_class2) / len(age_class2)
+print("Средний возраст учеников класса 1:", average_age_class1)
+print("Средний возраст учеников класса 2:", average_age_class2)

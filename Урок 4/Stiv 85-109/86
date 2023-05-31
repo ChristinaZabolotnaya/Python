@@ -1,0 +1,11 @@
+def taxi_cost(distance_km):
+    base_cost = 4.00
+    additional_cost = (distance_km * 1000 // 140) * 0.25
+    total_cost = base_cost + additional_cost
+    return total_cost
+
+distance_km = float(input("Введите расстояние поездки в километрах: "))
+
+cost = taxi_cost(distance_km)
+
+print("Стоимость поездки:", cost)

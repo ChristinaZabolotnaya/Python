@@ -1,0 +1,8 @@
+original_prices = [4.95, 9.95, 14.95, 19.95, 24.95]
+discount = 0.6
+
+print("{:<10} {:<10} {:<10}".format("Цена", "Скидка", "Новая цена"))
+for price in original_prices:
+    discount_amount = price * discount
+    new_price = price - discount_amount
+    print("{:<10.2f} {:<10.2f} {:<10.2f}".format(price, discount_amount, new_price))

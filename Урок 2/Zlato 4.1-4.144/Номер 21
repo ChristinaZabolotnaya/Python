@@ -1,0 +1,10 @@
+rect1_bl = (-4, -3)
+rect1_side1 = 5
+rect1_side2 = 7
+rect2_bl = (1, -2)
+rect2_side1 = 5
+rect2_side2 = 6
+enclosing_bl = (min(rect1_bl[0], rect2_bl[0]), min(rect1_bl[1], rect2_bl[1]))
+enclosing_tr = (max(rect1_bl[0] + rect1_side1, rect2_bl[0] + rect2_side1), max(rect1_bl[1] + rect1_side2, rect2_bl[1] + rect2_side2))
+print("Координаты нижнего левого угла окружающего прямоугольника равны", enclosing_bl)
+print("Координаты правого верхнего угла окружающего прямоугольника равны", enclosing_tr)

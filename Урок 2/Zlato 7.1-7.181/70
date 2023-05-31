@@ -1,0 +1,13 @@
+rainfall = []
+while True:
+  mm = float(input("Введите количество мм осадков за день: "))
+  if mm == 0:
+    break
+  rainfall.append(mm)
+count_no_rain = 0
+for mm in rainfall:
+  if mm == 0:
+    count_no_rain += 1
+  else:
+    break
+print("Количество дней мая без осадков:", count_no_rain)

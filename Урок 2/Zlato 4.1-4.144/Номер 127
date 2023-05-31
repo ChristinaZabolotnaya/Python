@@ -1,0 +1,21 @@
+a = int(input())
+b = int(input())
+c = int(input())
+if a > b and a > c:
+  print("Самое большое число -", a)
+elif b > a and b > c:
+  print("Самое большое число -", b)
+else:
+  print("Самое большое число -", c)
+if a < b and a < c:
+  print("Самое маленькое число -", a)
+elif b < a and b < c:
+  print("Самое маленькое число -", b)
+else:
+  print("Самое маленькое число -", c)
+if (a > b and a < c) or (a < b and a > c):
+  print(a, "является средним числом")
+elif (b > a and b < c) or (b < a and b > c):
+  print(b, "является средним числом")
+else:
+  print(c, "является средним числом")

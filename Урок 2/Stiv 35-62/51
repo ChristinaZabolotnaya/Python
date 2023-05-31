@@ -1,0 +1,17 @@
+import math
+
+a = float(input("Введите значение a: "))
+b = float(input("Введите значение b: "))
+c = float(input("Введите значение c: "))
+
+discriminant = b**2 - 4*a*c
+
+if discriminant < 0:
+    print("Квадратное уравнение не имеет действительных корней")
+elif discriminant == 0:
+    x = -b / (2*a)
+    print(f"Квадратное уравнение имеет один действительный корень: {x}")
+else:
+    x1 = (-b + math.sqrt(discriminant)) / (2*a)
+    x2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print(f"Квадратное уравнение имеет два действительных корня: {x1} и {x2}")

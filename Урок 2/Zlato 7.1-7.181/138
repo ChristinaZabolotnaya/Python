@@ -1,0 +1,6 @@
+temperatures = []
+for i in range(31):
+  temp = float(input(f"Введите температуру воздуха за день {i+1}: "))
+  temperatures.append(temp)
+max_temperature = max(temperatures)
+print(f"Максимальная температура воздуха: {max_temperature}")

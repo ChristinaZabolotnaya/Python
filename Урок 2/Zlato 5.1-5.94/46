@@ -1,0 +1,11 @@
+k = 6
+numerator = [1, 2]
+denominator = [1, 1]
+for i in range(2, k):
+  numerator.append(numerator[i-1] + numerator[i-2])
+  denominator.append(denominator[i-1] + denominator[i-2])
+fraction = []
+for i in range(k):
+  fraction.append(numerator[i]/denominator[i])
+print("k-й член последовательности:", fraction[-1])
+print("Первые", k, "членов последовательности:", fraction)

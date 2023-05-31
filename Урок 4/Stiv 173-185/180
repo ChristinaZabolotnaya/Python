@@ -1,0 +1,17 @@
+def edit_distance(s, t):
+    if len(s) == 0:
+        return len(t)
+    elif len(t) == 0:
+        return len(s)
+    else:
+        cost = 0
+        if s[-1] != t[-1]:
+            cost = 1
+        d1 = edit_distance(s[:-1], t) + 1
+        d2 = edit_distance(s, t[:-1]) + 1
+        d3 = edit_distance(s[:-1], t[:-1]) + cost
+        return min(d1, d2, d3)
+
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+print("Редакционное расстояние между словами", word1, "и", word2, "равно", edit_distance(word1, word2))

@@ -1,0 +1,24 @@
+n = int(input("Введите натуральное число: "))
+max_digit = 0
+min_digit = 9
+pos_max_end = 0
+pos_min_end = 0
+pos_max_start = 0
+pos_min_start = 0
+pos = 1
+while n > 0:
+  digit = n % 10
+  if digit > max_digit:
+    max_digit = digit
+    pos_max_end = pos
+  if digit < min_digit:
+    min_digit = digit
+    pos_min_end = pos
+  n //= 10
+  pos += 1
+pos_max_start = pos - pos_max_end + 1
+pos_min_start = pos - pos_min_end + 1
+print("Порядковый номер максимальной цифры с конца числа:", pos_max_end)
+print("Порядковый номер максимальной цифры с начала числа:", pos_max_start)
+print("Порядковый номер минимальной цифры с конца числа:", pos_min_end)
+print("Порядковый номер минимальной цифры с начала числа:", pos_min_start)

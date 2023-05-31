@@ -1,0 +1,31 @@
+filename = input("Введите имя файла: ")
+valid_words = []
+invalid_words = []
+
+try:
+    with open(filename, 'r') as f:
+        for line in f:
+            words = line.strip().split()
+            for word in words:
+                if 'ei' in word or 'ie' in word:
+                    if 'cei' in word or 'cie' in word:
+                        if 'cei' in word:
+                            valid_words.append(word)
+                        else:
+                            invalid_words.append(word)
+                    else:
+                        if 'ei' in word:
+                            invalid_words.append(word)
+                        else:
+                            valid_words.append(word)
+
+    valid_words = list(set(valid_words))
+    invalid_words = list(set(invalid_words))
+
+    print("Слова, следующие правилу:", valid_words)
+    print("Количество слов, следующих правилу:", len(valid_words))
+    print("Слова, нарушающие правило:", invalid_words)
+    print("Количество слов, нарушающих правило:", len(invalid_words))
+
+except FileNotFoundError:
+    print("Файл не найден")

@@ -1,0 +1,9 @@
+sequence = []
+for i in range(15):
+  num = float(input(f"Введите число а{i+1}: "))
+  sequence.append(num)
+if any(x < 0 for x in sequence):
+  index = sequence.index(next(x for x in sequence if x < 0)) + 1
+  print(f"Первое отрицательное число имеет порядковый номер: {index}")
+else:
+  print("Отрицательных чисел в последовательности нет.")

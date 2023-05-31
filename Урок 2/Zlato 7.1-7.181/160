@@ -1,0 +1,8 @@
+n = int(input("Введите количество спортсменов: "))
+results = []
+for i in range(n):
+  time = float(input(f"Введите результат спортсмена {i+1}: "))
+  results.append(time)
+best_time = min(results)
+best_index = results.index(best_time)
+print(f"Лучший результат показал спортсмен под номером {best_index+1}")

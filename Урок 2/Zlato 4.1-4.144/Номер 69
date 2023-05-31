@@ -1,0 +1,18 @@
+a = int(input("Enter the length of the table: "))
+b = int(input("Enter the width of the table: "))
+c = int(input("Enter the length of a domino bone: "))
+d = int(input("Enter the width of a domino bone: "))
+e = int(input("Enter the height of a domino bone: "))
+if a % c == 0 and b % d == 0:
+  num_bones = (a // c) * (b // d)
+elif a % d == 0 and b % c == 0:
+  num_bones = (a // d) * (b // c)
+elif a % c == 0 and b % e == 0:
+  num_bones = (a // c) * (b // e)
+elif a % e == 0 and b % c == 0:
+  num_bones = (a // e) * (b // c)
+elif a % d == 0 and b % e == 0:
+  num_bones = (a // d) * (b // e)
+elif a % e == 0 and b % d == 0:
+  num_bones = (a // e) * (b // d)
+print("The maximum number of domino bones that can be placed on the table is:", num_bones)

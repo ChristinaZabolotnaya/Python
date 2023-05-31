@@ -1,0 +1,11 @@
+import sys
+
+if len(sys.argv) < 2:
+    print("Error: no files specified")
+else:
+    for file_name in sys.argv[1:]:
+        try:
+            with open(file_name, "r") as file:
+                print(file.read())
+        except FileNotFoundError:
+            print("Error: file not found -", file_name)

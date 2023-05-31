@@ -1,0 +1,3 @@
+class_sizes = list(map(int, input("Введите численность каждого класса через пробел: ").split()))
+class_size_difference = max(class_sizes) - min(class_sizes)
+print(f"Численность самого большого класса превышает численность самого маленького класса на {class_size_difference} учеников")

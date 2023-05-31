@@ -1,0 +1,7 @@
+speeds = []
+for i in range(12):
+  speed = int(input(f"Введите максимальную скорость автомобиля марки {i+1}: "))
+  speeds.append(speed)
+
+second_max_speed = sorted(speeds)[-2]
+print(f"Скорость автомобиля, больше которой только максимальное значение скорости, равна {second_max_speed}")

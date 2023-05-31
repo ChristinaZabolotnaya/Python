@@ -1,0 +1,16 @@
+def isInteger(s):
+    s = s.strip()
+    if len(s) == 0:
+        return False
+    if s[0] in "+-":
+        s = s[1:]
+    if not s.isdigit():
+        return False
+    return True
+
+if __name__ == "__main__":
+    s = input("Enter a string: ")
+    if isInteger(s):
+        print("The input can be interpreted as an integer")
+    else:
+        print("The input cannot be interpreted as an integer")

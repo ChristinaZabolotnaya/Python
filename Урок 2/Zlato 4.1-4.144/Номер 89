@@ -1,0 +1,8 @@
+a, b, c, d, n, m = map(int, input().split())
+train_arrival = a * 60 + b
+train_departure = c * 60 + d
+passenger_arrival = n * 60 + m
+if train_arrival <= passenger_arrival <= train_departure:
+  print("Поезд стоит на платформе")
+else:
+  print("Поезд не стоит на платформе")

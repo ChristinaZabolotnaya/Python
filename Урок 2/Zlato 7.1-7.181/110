@@ -1,0 +1,11 @@
+masses = []
+while True:
+  mass = float(input("Введите массу человека (-1 для завершения ввода): "))
+  if mass == -1:
+    break
+  masses.append(mass)
+full_masses = [x for x in masses if x > 100]
+mean_full = sum(full_masses) / len(full_masses)
+mean_rest = (sum(masses) - sum(full_masses)) / (len(masses) - len(full_masses))
+print(f"Средняя масса полных людей: {mean_full}")
+print(f"Средняя масса остальных людей: {mean_rest}")

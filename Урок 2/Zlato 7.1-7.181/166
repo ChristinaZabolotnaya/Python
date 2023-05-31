@@ -1,0 +1,6 @@
+n = 20
+voltages = list(map(float, input("Введите напряжения на зажимах: ").split()))
+resistances = list(map(float, input("Введите характеристики каждого сопротивления: ").split()))
+currents = [voltages[i]/resistances[i] for i in range(n)]
+min_current_index = currents.index(min(currents))
+print(f"Минимальный ток проходит через сопротивление под номером {min_current_index+1}")

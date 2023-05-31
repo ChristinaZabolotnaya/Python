@@ -1,0 +1,29 @@
+n = int(input("Введите натуральное число: "))
+a = int(input("Введите цифру a: "))
+b = int(input("Введите цифру b: "))
+k = int(input("Введите число k: "))
+has_a = False
+has_b = True
+count_a = 0
+for digit in str(n):
+  if int(digit) == a:
+    has_a = True
+    count_a += 1
+  if int(digit) == b:
+    has_b = False
+if has_a:
+  print("В числе есть цифра a")
+else:
+  print("В числе нет цифры a")
+if has_b:
+  print("В числе нет цифры b")
+else:
+  print("В числе есть цифра b")
+if count_a > k:
+  print("Цифра a встречается в числе более k раз")
+else:
+  print("Цифра a встречается в числе не более k раз")
+if has_a and not has_b:
+  print("В числе есть цифры a и b")
+else:
+  print("В числе нет цифр a и/или b")

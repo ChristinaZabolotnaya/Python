@@ -1,0 +1,6 @@
+triple1 = [float(input()), float(input()), float(input())]
+triple2 = [float(input()), float(input()), float(input())]
+middle1 = sum(triple1) - max(triple1) - min(triple1)
+middle2 = sum(triple2) - max(triple2) - min(triple2)
+average = (middle1 + middle2) / 2
+print("Среднее арифметическое средних чисел каждой тройки -", average)

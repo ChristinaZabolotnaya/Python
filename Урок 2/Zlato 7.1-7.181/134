@@ -1,0 +1,8 @@
+sequence = []
+while True:
+  num = float(input("Введите число (для завершения введите 0): "))
+  if num == 0:
+    break
+  sequence.append(num)
+unique_numbers = len(set(sequence))
+print(f"Количество различных чисел в последовательности: {unique_numbers}")

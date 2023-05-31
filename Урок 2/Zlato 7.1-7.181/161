@@ -1,0 +1,8 @@
+n = int(input("Введите количество команд: "))
+scores = []
+for i in range(n):
+  score = int(input(f"Введите количество очков команды {i+1}: "))
+  scores.append(score)
+min_score = min(scores)
+min_index = scores.index(min_score)
+print(f"Наименьшее количество очков набрала команда под номером {min_index+1}")

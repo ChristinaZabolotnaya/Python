@@ -1,0 +1,9 @@
+import math
+l = 4.5
+h = 3
+angle = math.atan(h/l)
+for i in range(0, 23):
+  h -= 0.2*math.sin(angle)
+  l += 0.2*math.cos(angle)
+  angle = math.atan(h/l)
+  print("Угол:", math.degrees(angle))

@@ -1,0 +1,9 @@
+sequence = []
+for i in range(14):
+  sequence.append(int(input(f"Введите число {i+1}: ")))
+even_nums = [x for x in sequence if x % 2 == 0]
+if len(even_nums) > 0:
+  mean_even = sum(even_nums) / len(even_nums)
+  print(f"Среднее арифметическое четных чисел: {mean_even}")
+else:
+  print("Среди заданных чисел нет четных чисел.")

@@ -1,0 +1,10 @@
+populations = []
+areas = []
+for i in range(16):
+  population = float(input(f"Введите численность населения государства {i+1} (в миллионах жителей): "))
+  area = float(input(f"Введите площадь государства {i+1} (в тысячах квадратных километров): "))
+  populations.append(population)
+  areas.append(area)
+densities = [populations[i] / (areas[i] * 1000) for i in range(16)]
+min_density = min(densities)
+print(f"Минимальная плотность населения: {min_density}")

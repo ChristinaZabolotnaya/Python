@@ -1,0 +1,15 @@
+import math
+
+n = int(input("Введите количество пар значений: "))
+count_hits = 0
+for i in range(n):
+  a = float(input(f"Введите угол а для пары {i+1}: "))
+  v0 = float(input(f"Введите начальную скорость v0 для пары {i+1}: "))
+  R = float(input("Введите расстояние до цели R: "))
+  H = float(input("Введите высоту цели H: "))
+  t = R / (v0 * math.cos(math.radians(a)))
+  y = v0 * t * math.sin(math.radians(a)) - 0.5 * 9.8 * t**2
+  if y <= H:
+    count_hits += 1
+percent_hits = count_hits / n * 100
+print("Процент попадания в цель:", percent_hits)

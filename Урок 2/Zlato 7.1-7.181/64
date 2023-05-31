@@ -1,0 +1,9 @@
+birth_years = []
+n = int(input("Введите количество людей: "))
+for i in range(n):
+  birth_year = int(input(f"Введите год рождения человека {i+1}: "))
+  birth_years.append(birth_year)
+count_before_1990 = sum(1 for year in birth_years if year < 1990)
+count_after_2000 = sum(1 for year in birth_years if year > 2000)
+print("Количество людей, родившихся до 1990 года:", count_before_1990)
+print("Количество людей, родившихся после 2000 года:", count_after_2000)

@@ -1,0 +1,18 @@
+a = int(input())
+b = int(input())
+sum_all = 0
+sum_a_to_400 = 0
+sum_minus15_to_b = 0
+sum_a_to_b = 0
+for i in range(200, 601):
+  sum_all += i
+for i in range(a, 401):
+  sum_a_to_400 += i
+for i in range(-15, b+1):
+  sum_minus15_to_b += i
+for i in range(a, b+1):
+  sum_a_to_b += i
+print("Сумма всех целых чисел от 200 до 600:", sum_all)
+print("Сумма всех целых чисел от", a, "до 400:", sum_a_to_400)
+print("Сумма всех целых чисел от -15 до", b, ":", sum_minus15_to_b)
+print("Сумма всех целых чисел от", a, "до", b, ":", sum_a_to_b)

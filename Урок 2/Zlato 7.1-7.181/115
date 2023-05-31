@@ -1,0 +1,11 @@
+t = int(input("Введите натуральное число t: "))
+sequence = []
+for i in range(t):
+  sequence.append(int(input(f"Введите число a{i+1}: ")))
+p = int(input("Введите число p: "))
+filtered_sequence = [x for x in sequence if x % p == 0]
+if len(filtered_sequence) > 0:
+  mean = sum(filtered_sequence) / len(filtered_sequence)
+  print(f"Среднее арифметическое чисел, кратных {p}: {mean}")
+else:
+  print(f"Среди заданных чисел нет чисел, кратных {p}.")

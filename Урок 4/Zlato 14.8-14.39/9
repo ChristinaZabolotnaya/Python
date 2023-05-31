@@ -1,0 +1,18 @@
+def trapezium_perimeter(a, b, h):
+    return a + b + 2 * ((a-b)**2 + h**2)**0.5
+
+def trapezium_area(a, b, h):
+    return (a + b) * h / 2
+
+a1 = float(input("Введите основание a1: "))
+b1 = float(input("Введите основание b1: "))
+h1 = float(input("Введите высоту h1: "))
+a2 = float(input("Введите основание a2: "))
+b2 = float(input("Введите основание b2: "))
+h2 = float(input("Введите высоту h2: "))
+
+perimeter_sum = trapezium_perimeter(a1, b1, h1) + trapezium_perimeter(a2, b2, h2)
+area_sum = trapezium_area(a1, b1, h1) + trapezium_area(a2, b2, h2)
+
+print("Сумма периметров:", perimeter_sum)
+print("Сумма площадей:", area_sum)

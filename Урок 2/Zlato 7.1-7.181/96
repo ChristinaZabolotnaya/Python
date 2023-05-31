@@ -1,0 +1,7 @@
+sequence = []
+for i in range(15):
+  sequence.append(int(input(f"Введите число {i+1}: ")))
+for i in range(1, len(sequence)):
+  if sequence[i] == sequence[i-1]:
+    print(f"Пара одинаковых соседних чисел: {sequence[i]}, {sequence[i-1]}")
+    break

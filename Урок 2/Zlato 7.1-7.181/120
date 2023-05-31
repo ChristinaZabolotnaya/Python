@@ -1,0 +1,10 @@
+p = int(input("Введите натуральное число p: "))
+sequence = []
+for i in range(p):
+  sequence.append(int(input(f"Введите число c{i+1}: ")))
+last_index = None
+for i in range(p-1, -1, -1):
+  if sequence[i] == 25:
+    last_index = i+1
+    break
+print(f"Номер последнего числа, равного 25: {last_index}")

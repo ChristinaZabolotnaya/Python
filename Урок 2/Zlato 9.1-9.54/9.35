@@ -1,0 +1,10 @@
+p = int(input("Введите сумму: "))
+for i in range(p, p+11):
+    count_64 = i // 64
+    count_32 = (i - count_64*64) // 32
+    count_16 = (i - count_64*64 - count_32*32) // 16
+    count_8 = (i - count_64*64 - count_32*32 - count_16*16) // 8
+    count_4 = (i - count_64*64 - count_32*32 - count_16*16 - count_8*8) // 4
+    count_2 = (i - count_64*64 - count_32*32 - count_16*16 - count_8*8 - count_4*4) // 2
+    count_1 = i - count_64*64 - count_32*32 - count_16*16 - count_8*8 - count_4*4 - count_2*2
+    print("Сумма:", i, "Купюры по 64:", count_64, "Купюры по 32:", count_32, "Купюры по 16:", count_16, "Купюры по 8:", count_8, "Купюры по 4:", count_4, "Купюры по 2:", count_2, "Купюры по 1:", count_1)

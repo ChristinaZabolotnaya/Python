@@ -1,0 +1,9 @@
+heights = []
+for i in range(15):
+  height = int(input(f"Введите рост ученика {i+1}: "))
+  heights.append(height)
+new_height = int(input("Введите рост нового ученика: "))
+heights.append(new_height)
+heights.sort(reverse=True)
+rank = heights.index(new_height) + 1
+print(f"Рост нового ученика занимает {rank}-е место в перечне ростов.")

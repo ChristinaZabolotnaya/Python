@@ -1,0 +1,18 @@
+import sys
+import re
+
+if len(sys.argv) < 2:
+    print("Необходимо указать имя файла для чтения")
+else:
+    try:
+        with open(sys.argv[1], 'r') as f:
+            text = f.read()
+            words = re.findall(r'\b(?=[AEIOUYaeiouy])(a|e|i|o|u|y)*[a-z]*\1*[a-z]*\1*[a-z]*\1*[a-z]*\b', text)
+            if words:
+                print("Слова, содержащие все гласные буквы в том порядке, в котором они расположены в алфавите:")
+                for w in words:
+                    print(w)
+            else:
+                print("В тексте нет слов, содержащих все гласные буквы в том порядке, в котором они расположены в алфавите")
+    except FileNotFoundError:
+        print(f"Ошибка: файл '{sys.argv[1]}' не найден")

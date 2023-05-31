@@ -1,0 +1,9 @@
+from math import floor
+
+year = int(input("Введите год: "))
+
+day_of_the_week = (year + floor((year - 1)/4) - floor((year - 1)/100) + floor((year - 1)/400)) % 7
+
+days_of_week = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+
+print(f"1 января {year} года - {days_of_week[day_of_the_week]}")

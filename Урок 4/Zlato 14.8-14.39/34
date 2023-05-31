@@ -1,0 +1,15 @@
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+n = int(input("Введите количество натуральных чисел: "))
+arr = [int(i) for i in input("Введите числа через пробел: ").split()]
+
+if n == 1:
+    print("Наибольший общий делитель:", arr[0])
+else:
+    gcd_all = gcd(arr[0], arr[1])
+    for i in range(2, n):
+        gcd_all = gcd(gcd_all, arr[i])
+    print("Наибольший общий делитель:", gcd_all)

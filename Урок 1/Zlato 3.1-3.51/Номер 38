@@ -1,0 +1,7 @@
+x = 0
+for i in range(100, 1000):
+    second = i // 10 % 10
+    if int(str(second) + str(i)[-1] + str(i)[0]) == 456:
+        x = i
+        break
+print("Число x равно =", x)

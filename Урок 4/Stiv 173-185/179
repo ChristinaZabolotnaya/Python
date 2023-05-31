@@ -1,0 +1,13 @@
+def square_root(n, guess=1.0):
+    if abs(guess**2 - n) < 10**(-12):
+        return guess
+    else:
+        return square_root(n, (guess + (n/guess))/2)
+
+num1 = 25
+num2 = 144
+num3 = 2
+
+print("Квадратный корень из", num1, "равен", square_root(num1))
+print("Квадратный корень из", num2, "равен", square_root(num2))
+print("Квадратный корень из", num3, "равен", square_root(num3))

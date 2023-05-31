@@ -1,0 +1,61 @@
+def is_leap_year(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+
+def ordinal_to_date(ordinal_day, year):
+    days_in_month = [0,31,28,31,30,31,30,31,31,30,31,30,31]
+    if is_leap_year(year):
+        days_in_month[2] = 29
+    month = 1
+    while ordinal_day > days_in_month[month]:
+        ordinal_day -= days_in_month[month]
+        month += 1
+    return (ordinal_day, month)
+
+def date_difference():
+    day1 = int(input("Enter the day of the first date: "))
+    month1 = int(input("Enter the month of the first date: "))
+    year1 = int(input("Enter the year of the first date: "))
+    day2 = int(input("Enter the day of the second date: "))
+    month2 = int(input("Enter the month of the second date: "))
+    year2 = int(input("Enter the year of the second date: "))
+    
+    ordinal_day1 = ordinalDate(day1, month1, year1)
+    ordinal_day2 = ordinalDate(day2, month2, year2)
+    
+    if year1 == year2:
+        difference = abs(ordinal_day2 - ordinal_day1)
+    elif year2 > year1:
+        difference = ordinal_day2 + (366 - ordinal_day1)
+        for i in range(year1+1, year2):
+            if is_leap_year(i):
+                difference += 366
+            else:
+                difference += 365
+    else:
+        difference = ordinal_day1 + (366 - ordinal_day2)
+        for i in range(year2+1, year1):
+            if is_leap_year(i):
+                difference += 366
+            else:
+                difference += 365
+    return difference
+
+ordinal_day = int(input("Enter the ordinal date (yyyyddd): "))
+year = int(str(ordinal_day)[:4])
+
+day, month = ordinal_to_date(ordinal_day % 1000, year)
+
+print(f"The date corresponding to {ordinal_day} is {day}/{month}/{year}")
+
+difference = date_difference()
+
+print(f"The difference between the two dates is {difference} days")

@@ -1,0 +1,9 @@
+n = int(input("Введите натуральное число: "))
+numbers = []
+for i in range(10):
+  number = int(input("Введите число: "))
+  numbers.append(number)
+if sum(numbers) < n:
+  print("Сумма чисел меньше", n)
+else:
+  print("Сумма чисел не меньше", n)

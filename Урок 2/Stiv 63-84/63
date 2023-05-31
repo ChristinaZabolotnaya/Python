@@ -1,0 +1,12 @@
+numbers = []
+while True:
+    num = int(input("Введите число (0 для окончания ввода): "))
+    if num == 0:
+        if len(numbers) == 0:
+            print("Ошибка: не было введено ни одного числа")
+        else:
+            average = sum(numbers) / len(numbers)
+            print(f"Среднее значение: {average}")
+        break
+    else:
+        numbers.append(num)

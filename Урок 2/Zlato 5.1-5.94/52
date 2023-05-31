@@ -1,0 +1,8 @@
+inner_diameter = 10
+wall_thickness = 0.5
+volume = 0
+for i in range(12):
+  r = (inner_diameter + 2*wall_thickness)/2
+  volume += 4/3*3.14*(r**3)
+  inner_diameter += 2*wall_thickness
+print("Суммарный объем в литрах двенадцати вложенных друг в друга шаров:", volume/1000)

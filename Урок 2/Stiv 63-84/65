@@ -1,0 +1,4 @@
+print("{:<10} {:<10}".format("Цельсии", "Фаренгейты"))
+for celsius in range(0, 101, 10):
+    fahrenheit = celsius * 9/5 + 32
+    print("{:<10} {:<10.1f}".format(celsius, fahrenheit))

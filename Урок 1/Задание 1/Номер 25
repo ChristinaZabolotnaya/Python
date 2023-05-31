@@ -1,0 +1,5 @@
+a = int(input('L ='))
+b = int(input('b ='))
+c = int(input('H ='))
+print('V =', a * b * c)
+print('S =', 2 * c * (a + b))

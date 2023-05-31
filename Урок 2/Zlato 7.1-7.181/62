@@ -1,0 +1,13 @@
+p = int(input("Введите натуральное число p: "))
+a = []
+n = int(input("Введите количество чисел a: "))
+for i in range(n):
+  num = int(input(f"Введите число a{i+1}: "))
+  a.append(num)
+count_gt_p = sum(1 for num in a if num > p)
+print("Количество чисел ai, которые больше p:", count_gt_p)
+count_ends_with_5 = sum(1 for num in a if num % 10 == 5)
+print("Количество чисел ai, которые оканчиваются на 5:", count_ends_with_5)
+k = int(input("Введите число k: "))
+count_multiples_of_k = sum(1 for num in a if num % k == 0)
+print("Количество чисел ai, которые кратны числу k:", count_multiples_of_k)

@@ -1,0 +1,8 @@
+nums = []
+while True:
+  num = float(input("Введите следующее число последовательности: "))
+  if num == 0:
+    break
+  nums.append(num)
+count_before_zero = len(nums)
+print("Количество чисел, предшествующих первому числу 0:", count_before_zero)

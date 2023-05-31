@@ -1,0 +1,13 @@
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+a = int(input("Введите числитель дроби: "))
+b = int(input("Введите знаменатель дроби: "))
+
+divisor = gcd(a, b)
+p = a // divisor
+q = b // divisor
+
+print("Сокращенная дробь:", p, "/", q)

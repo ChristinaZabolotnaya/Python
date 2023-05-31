@@ -1,0 +1,9 @@
+population = []
+densities = []
+for i in range(12):
+  population_district = float(input("Введите количество жителей в районе {}: ".format(i+1)))
+  population.append(population_district)
+  density_district = float(input("Введите плотность населения в районе {} (тыс. чел./км2): ".format(i+1)))
+  densities.append(density_district)
+total_area = sum(population) / sum(densities)
+print("Общая площадь территории области:", total_area)

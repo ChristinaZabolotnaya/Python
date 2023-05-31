@@ -1,0 +1,15 @@
+n = int(input("Введите натуральное число: "))
+sorted_monotonic = True
+prev_digit = n % 10
+while n > 0:
+  digit = n % 10
+  if digit > prev_digit or digit < prev_digit:
+    prev_digit = digit
+    n //= 10
+  else:
+    sorted_monotonic = False
+    break
+if sorted_monotonic:
+  print("Последовательность цифр упорядочена по возрастанию или убыванию при просмотре слева направо")
+else:
+  print("Последовательность цифр не упорядочена по возрастанию или убыванию при просмотре слева направо")

@@ -1,0 +1,13 @@
+deposit = 1000
+month = 0
+while True:
+  month += 1
+  increase = deposit * 0.02
+  deposit += increase
+  if increase > 30:
+    print("Ежемесячное увеличение вклада превысит 30 руб. через", month, "месяцев")
+    break
+while deposit < 1200:
+  month += 1
+  deposit += deposit * 0.02
+print("Размер вклада превысит 1200 руб. через", month, "месяцев")

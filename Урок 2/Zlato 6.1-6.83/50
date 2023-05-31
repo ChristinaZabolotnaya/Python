@@ -1,0 +1,25 @@
+n = int(input("Введите натуральное число: "))
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+k = len(str(n))
+sum_digits = 0
+prod_digits = 1
+for digit in str(n):
+  sum_digits += int(digit)
+  prod_digits *= int(digit)
+if sum_digits < a:
+  print("Сумма цифр меньше a")
+else:
+  print("Сумма цифр не меньше a")
+if prod_digits > b:
+  print("Произведение цифр больше b")
+else:
+  print("Произведение цифр не больше b")
+if k == len(str(n)):
+  print("Число k-значное")
+else:
+  print("Число не k-значное")
+if int(str(n)[0]) > t:
+  print("Первая цифра превышает t")
+else:
+  print("Первая цифра не превышает t")

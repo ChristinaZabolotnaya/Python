@@ -1,0 +1,10 @@
+scores = []
+for i in range(2):
+  athlete_scores = []
+  for j in range(5):
+    score = int(input("Введите балл спортсмена за вид спорта: "))
+    athlete_scores.append(score)
+  scores.append(athlete_scores)
+total_scores = [sum(athlete_scores) for athlete_scores in scores]
+print("Сумма баллов первого спортсмена равна", total_scores[0])
+print("Сумма баллов второго спортсмена равна", total_scores[1])

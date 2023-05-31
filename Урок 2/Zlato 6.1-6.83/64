@@ -1,0 +1,7 @@
+n = int(input("Введите сумму, которую нужно выплатить: "))
+banknotes = [64, 32, 16, 8, 4, 2, 1]
+count_banknotes = [0] * len(banknotes)
+for i in range(len(banknotes)):
+  count_banknotes[i] = n // banknotes[i]
+  n %= banknotes[i]
+print("Количество купюр каждого достоинства:", count_banknotes)

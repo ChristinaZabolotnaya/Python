@@ -1,0 +1,5 @@
+n = 10
+fibonacci = [1, 1]
+for i in range(2, n):
+  fibonacci.append(fibonacci[i-1] + fibonacci[i-2])
+print("3-й, 4-й, ..., 10-й члены последовательности Фибоначчи:", fibonacci[2:])

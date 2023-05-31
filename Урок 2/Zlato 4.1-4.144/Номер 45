@@ -1,0 +1,5 @@
+x = float(input("Введите вещественное число: "))
+if 4 <= x < 5.7:
+  print(f"f({x}) = {x*x}")
+else:
+  print(f"f({x}) = 4")

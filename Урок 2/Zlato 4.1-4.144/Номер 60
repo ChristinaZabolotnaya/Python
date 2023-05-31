@@ -1,0 +1,7 @@
+height1 = float(input("Введите рост человека 1 - "))
+height2 = float(input("Введите рост человека 2 - "))
+height3 = float(input("Введите рост человека 3 - "))
+if height1 == height2 == height3:
+  print("Все трое одного роста.")
+else:
+  print("Три человека разного роста.")

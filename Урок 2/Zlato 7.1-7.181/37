@@ -1,0 +1,9 @@
+population = []
+areas = []
+for i in range(12):
+  population_district = float(input("Введите количество жителей в районе {}: ".format(i+1)))
+  population.append(population_district)
+  area_district = float(input("Введите площадь района {} в км2: ".format(i+1)))
+  areas.append(area_district)
+average_density = sum(population) / sum(areas)
+print("Средняя плотность населения по области:", average_density)

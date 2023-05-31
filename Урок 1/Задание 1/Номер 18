@@ -1,0 +1,7 @@
+x = float(input('x = '))
+y = float(input('y = '))
+from math import sqrt, sin
+chis = x + (2 + y) / x ** 2 # Числитель для z
+zn = y + 1 / sqrt(x ** 2 + 10) # Знаменатель для z
+print('z =', chis / zn)
+print('q =', 7.25 * sin(x) - abs(y))

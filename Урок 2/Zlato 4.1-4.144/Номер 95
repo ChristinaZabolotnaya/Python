@@ -1,0 +1,14 @@
+n = int(input())
+if n <= 10:
+  print(n)
+elif n <= 20:
+  print(str(n)[1])
+else:
+  n -= 20
+  num_digits = len(str(n))
+  num_numbers = num_digits * 9
+  start_number = int("1" + "0" * (num_digits - 1))
+  number = start_number + (n - 1) // num_digits
+  digit_index = (n - 1) % num_digits
+  digit = str(number)[digit_index]
+  print(digit)

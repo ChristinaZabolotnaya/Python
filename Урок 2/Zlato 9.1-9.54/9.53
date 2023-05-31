@@ -1,0 +1,13 @@
+def smallest_cube_sum():
+    cubes = []
+    for i in range(1, 100):
+        cubes.append(i**3)
+    for i in range(len(cubes)):
+        for j in range(i+1, len(cubes)):
+            num1 = cubes[i]
+            num2 = cubes[j]
+            for k in range(1, 100):
+                if num1 + num2 == k**3:
+                    return k
+    return None
+print("Наименьшее натуральное число:", smallest_cube_sum())

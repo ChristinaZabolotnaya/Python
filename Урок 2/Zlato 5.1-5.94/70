@@ -1,0 +1,8 @@
+n = int(input("Введите натуральное число: "))
+x = int(input("Введите значение x: "))
+factorial = 1
+summa = 1
+for i in range(1, n+1):
+  factorial *= i
+  summa += x**i/factorial
+print("Сумма ряда от 1 до", n, ":", summa)

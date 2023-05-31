@@ -1,0 +1,19 @@
+import sys
+import re
+
+def find_uncommented_functions(filename):
+    try:
+        with open(filename, 'r') as f:
+            lines = f.readlines()
+            for i in range(len(lines)):
+                if re.match(r'^\s*def\s+\w+\(', lines[i]):
+                    if i == 0 or not re.match(r'^\s*#', lines[i-1]):
+                        print(f"Функция '{re.findall(r'def\s+(\w+)\(', lines[i])[0]}' в файле '{filename}' на строке {i+1} не снабжена комментарием")
+    except FileNotFoundError:
+        print(f"Ошибка: файл '{filename}' не найден")
+
+if len(sys.argv) < 2:
+    print("Необходимо указать имена файлов для проверки")
+else:
+    for filename in sys.argv[1:]:
+        find_uncommented_functions(filename)

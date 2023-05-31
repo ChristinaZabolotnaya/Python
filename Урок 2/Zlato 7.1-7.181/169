@@ -1,0 +1,8 @@
+n = int(input("Введите количество этапов: "))
+times = list(map(int, input("Введите время на каждом этапе: ").split()))
+first_place_index = times.index(min(times))
+last_place_index = times.index(max(times))
+if first_place_index < last_place_index:
+  print("Да, этап, который он выиграл, был раньше этапа, на котором он занял последнее место")
+else:
+  print("Нет, этап, который он выиграл, был позже этапа, на котором он занял последнее место")

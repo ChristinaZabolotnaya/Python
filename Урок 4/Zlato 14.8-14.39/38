@@ -1,0 +1,20 @@
+def last_index(sentence, letter):
+    index = -1
+    for i in range(len(sentence)):
+        if sentence[i] == letter:
+            index = i
+    return index
+
+sentence1 = input("Введите первое предложение: ")
+sentence2 = input("Введите второе предложение: ")
+letter = 'й'
+
+index1 = last_index(sentence1, letter)
+index2 = last_index(sentence2, letter)
+
+if index1 > index2:
+    print("В первом предложении буква", letter, "имеет больший порядковый номер")
+elif index1 < index2:
+    print("Во втором предложении буква", letter, "имеет больший порядковый номер")
+else:
+    print("Буква", letter, "имеет одинаковый порядковый номер в обоих предложениях")

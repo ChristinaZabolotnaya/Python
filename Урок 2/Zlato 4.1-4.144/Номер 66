@@ -1,0 +1,10 @@
+a1 = float(input("Enter the length of side a1 of the suitcase: "))
+a2 = float(input("Enter the length of side a2 of the suitcase: "))
+a3 = float(input("Enter the length of side a3 of the suitcase: "))
+b1 = float(input("Enter the length of side b1 of the box: "))
+b2 = float(input("Enter the length of side b2 of the box: "))
+b3 = float(input("Enter the length of side b3 of the box: "))
+if (a1 >= b1 and a2 >= b2 and a3 >= b3) or (a1 >= b1 and a2 >= b3 and a3 >= b2) or (a1 >= b2 and a2 >= b1 and a3 >= b3) or (a1 >= b2 and a2 >= b3 and a3 >= b1) or (a1 >= b3 and a2 >= b1 and a3 >= b2) or (a1 >= b3 and a2 >= b2 and a3 >= b1):
+  print("The box can fit inside the suitcase.")
+else:
+  print("The box cannot fit inside the suitcase.")

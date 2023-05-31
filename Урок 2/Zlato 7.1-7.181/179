@@ -1,0 +1,3 @@
+flats = list(map(int, input("Введите количество жильцов в каждой квартире через пробел: ").split()))
+max_residents = max(flats)
+print(f"Больше всего жильцов проживает в {flats.count(max_residents)} квартирах")

@@ -1,0 +1,13 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+n = int(input("Введите количество чисел: "))
+numbers = []
+for i in range(n):
+    num = int(input("Введите число: "))
+    numbers.append(num)
+result = numbers[0]
+for i in range(1, n):
+    result = gcd(result, numbers[i])
+print(result)

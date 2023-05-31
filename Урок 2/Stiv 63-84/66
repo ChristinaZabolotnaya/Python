@@ -1,0 +1,15 @@
+prices = []
+while True:
+    price_str = input("Введите цену товара (пустая строка для окончания ввода): ")
+    if price_str == "":
+        if len(prices) == 0:
+            print("Ошибка: не было введено ни одной цены")
+        else:
+            total = sum(prices)
+            rounded_total = round(total * 20) / 20
+            print(f"Сумма всех цен: {total}")
+            print(f"Сумма к оплате наличными: {rounded_total}")
+        break
+    else:
+        price = float(price_str)
+        prices.append(price)

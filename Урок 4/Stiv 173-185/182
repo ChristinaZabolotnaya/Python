@@ -1,0 +1,20 @@
+import csv
+
+def can_make_word(word, elements):
+    if len(word) == 0:
+        return ""
+    for i in range(1, 4):
+        if word[:i].lower() in elements:
+            rest = can_make_word(word[i:], elements)
+            if rest is not None:
+                return word[:i] + rest
+    return None
+
+with open('elements.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    elements = {row[1].lower(): row[2] for row in reader}
+
+for name, symbol in elements.items():
+    result = can_make_word(name.lower(), elements.keys())
+    if result is not None:
+        print(f"{name} может быть представлен как {result.upper()}")

@@ -1,0 +1,3 @@
+number = int(input("Введите трехзначное число: "))
+new_number = (number // 100) * 100 + (number % 10) * 10 + ((number % 100) // 10)
+print(f"Число после перестановки второй и третьей цифр: {new_number}")

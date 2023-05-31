@@ -1,0 +1,11 @@
+area = [100]
+yield_per_hectare = 20
+for i in range(2, 9):
+  area.append(area[i-2]*1.05)
+  yield_per_hectare *= 1.02
+  print("Урожайность за", i, "год:", yield_per_hectare)
+print("Площадь участка в четвертый, пятый, ..., седьмой год:", area[3:])
+total_yield = 0
+for i in range(6):
+  total_yield += area[i]*yield_per_hectare*100
+print("Урожай за первые шесть лет:", total_yield)

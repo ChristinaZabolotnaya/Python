@@ -1,0 +1,8 @@
+pages = []
+while True:
+  page = int(input("Введите количество страниц (0 - для окончания ввода): "))
+  if page == 0:
+    break
+  pages.append(page)
+total_pages = sum(page for page in pages if page > 16)
+print("Общее количество страниц в журналах:", total_pages)

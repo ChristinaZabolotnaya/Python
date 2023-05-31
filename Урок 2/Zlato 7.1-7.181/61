@@ -1,0 +1,6 @@
+heights = []
+for i in range(12):
+  height = int(input(f"Введите рост {i+1} юноши: "))
+  heights.append(height)
+count_below_165 = sum(1 for height in heights if height < 165)
+print("Количество юношей с ростом менее 165 см:", count_below_165)

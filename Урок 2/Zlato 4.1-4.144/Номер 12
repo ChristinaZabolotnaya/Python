@@ -1,0 +1,9 @@
+import math
+radius = int(input("Введите число r - "))
+side = int(input("Введите число side -  "))
+area_circle = math.pi * (radius ** 2) 
+area_square = side ** 2 
+if area_circle > area_square:
+  print("Круг имеет большую площадь")
+else:
+  print("Квадрат имеет большую площадь")

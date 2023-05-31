@@ -1,0 +1,8 @@
+a = int(input("Введите числитель дроби: "))
+b = int(input("Введите знаменатель дроби: "))
+gcd = a
+while gcd % b != 0:
+  gcd += a
+p = gcd // a
+q = gcd // b
+print("Сокращенная дробь: {}/{}".format(p, q))

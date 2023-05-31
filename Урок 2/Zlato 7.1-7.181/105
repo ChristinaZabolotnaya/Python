@@ -1,0 +1,10 @@
+sequence = []
+while True:
+  num = int(input("Введите число (-1 для завершения ввода): "))
+  if num == -1:
+    break
+  sequence.append(num)
+if len(set(sequence)) == 1:
+  print("Все элементы последовательности равны между собой.")
+else:
+  print("Не все элементы последовательности равны между собой.")

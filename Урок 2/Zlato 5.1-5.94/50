@@ -1,0 +1,5 @@
+distance = [10]
+for i in range(2, 11):
+  distance.append(distance[i-2]*1.1)
+print("Пробег лыжника за второй, третий, ..., десятый день тренировки:", distance[1:])
+print("Суммарный путь лыжника за первые 7 дней тренировок:", sum(distance[:7]))

@@ -1,0 +1,10 @@
+def is_palindrome(word):
+    return word == word[::-1]
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+word3 = input("Введите третье слово: ")
+
+if is_palindrome(word1) or is_palindrome(word2) or is_palindrome(word3):
+    print("Хотя бы одно слово является палиндромом")
+else:
+    print("Ни одно слово не является палиндромом")

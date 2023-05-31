@@ -1,0 +1,23 @@
+x_coords = []
+y_coords = []
+while True:
+    x_str = input("Введите координату X (пустая строка для окончания ввода): ")
+    if x_str == "":
+        if len(x_coords) < 2:
+            print("Ошибка: не было введено достаточно координат")
+        else:
+            # Добавляем координаты первой точки в конец списков, чтобы замкнуть фигуру
+            x_coords.append(x_coords[0])
+            y_coords.append(y_coords[0])
+            perimeter = 0
+            for i in range(len(x_coords) - 1):
+                side_length = ((x_coords[i+1] - x_coords[i])**2 + (y_coords[i+1] - y_coords[i])**2)**0.5
+                perimeter += side_length
+            print(f"Периметр многоугольника равен {perimeter}")
+        break
+    else:
+        y_str = input("Введите координату Y: ")
+        x = float(x_str)
+        y = float(y_str)
+        x_coords.append(x)
+        y_coords.append(y)

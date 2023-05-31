@@ -1,0 +1,8 @@
+n = int(input("Введите количество чисел: "))
+numbers = list(map(int, input("Введите числа: ").split()))
+min_index = numbers.index(min(numbers))
+max_index = numbers.index(max(numbers))
+if min_index < max_index:
+  print(f"Первым встретится минимальное число ({min(numbers)})")
+else:
+  print(f"Первым встретится максимальное число ({max(numbers)})")

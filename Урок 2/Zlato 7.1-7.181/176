@@ -1,0 +1,4 @@
+temperatures = list(map(int, input("Введите среднедневные температуры за июль через пробел: ").split()))
+sorted_temperatures = sorted(temperatures)
+coldest_days = [i+1 for i in range(len(temperatures)) if temperatures[i] in sorted_temperatures[:2]]
+print(f"Даты двух самых прохладных дней: {coldest_days}")

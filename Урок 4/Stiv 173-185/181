@@ -1,0 +1,14 @@
+def can_make_sum(coins, amount, count):
+    if amount == 0:
+        return True
+    if count == 0 or amount < 0:
+        return False
+    return can_make_sum(coins, amount-coins[count-1], count) or can_make_sum(coins, amount, count-1)
+
+coins = [1, 5, 10, 25]
+amount = int(input("Введите сумму: "))
+count = int(input("Введите количество монет: "))
+if can_make_sum(coins, amount*100, count):
+    print("Можно собрать данную сумму из заданного количества монет.")
+else:
+    print("Нельзя собрать данную сумму из заданного количества монет.")

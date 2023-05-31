@@ -1,0 +1,8 @@
+d_km = int(input("Введите число km - "))
+d_ft = int(input("Введите число ft -  "))
+d_ft_to_m = d_ft * 0.3048 
+d_km_to_m = d_km * 1000 
+if d_ft_to_m < d_km_to_m:
+  print("Расстояние в футах меньше")
+else:
+  print("Расстояние в километрах меньше")

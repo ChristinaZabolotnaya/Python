@@ -1,0 +1,16 @@
+rating = float(input("Введите рейтинг сотрудника: "))
+
+if rating == 0.0:
+    print("Низкий уровень")
+    bonus = 0
+elif rating == 0.4:
+    print("Удовлетворительный уровень")
+    bonus = rating * 2400
+elif rating >= 0.6:
+    print("Высокий уровень")
+    bonus = rating * 2400
+else:
+    print("Ошибка: неверный ввод")
+    bonus = 0
+
+print(f"Прибавка к зарплате: {bonus} руб.")

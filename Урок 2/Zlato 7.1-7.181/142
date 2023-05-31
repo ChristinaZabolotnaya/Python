@@ -1,0 +1,10 @@
+masses = []
+volumes = []
+for i in range(20):
+  mass = float(input(f"Введите массу тела {i+1} (в кг): "))
+  volume = float(input(f"Введите объем тела {i+1} (в см^3): "))
+  masses.append(mass)
+  volumes.append(volume)
+densities = [masses[i] / volumes[i] for i in range(20)]
+max_density = max(densities)
+print(f"Максимальная плотность материала: {max_density}")

@@ -1,0 +1,4 @@
+summa = 0
+for i in range(22, 211):
+  summa += i
+print("Сумма чисел от 22 до 210:", summa)

@@ -1,0 +1,6 @@
+students = []
+for i in range(11):
+  students_count = int(input(f"Введите количество учащихся в {i+1} классе: "))
+  students.append(students_count)
+total_students = sum(students[i] for i in range(0, 11, 2))
+print("Общее количество учащихся в нечетных классах:", total_students)

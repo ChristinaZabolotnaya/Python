@@ -1,0 +1,7 @@
+s = float(input('конфет за кг = '))
+c = float(input('печенья за кг = '))
+a = float(input('яблоки за кг = '))
+x = int(input('конфет купили в кг = '))
+y = int(input('печенья купили в кг = '))
+z = int(input('яблок купили в кг =  '))
+print('Итого = ', x ** s + y ** c + z ** a)

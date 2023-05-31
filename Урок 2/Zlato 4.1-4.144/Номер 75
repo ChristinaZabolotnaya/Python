@@ -1,0 +1,4 @@
+a = int(input("Enter a three-digit number: "))
+b = int(input("Enter a two-digit number: "))
+sum = a + b
+print("The digits of the sum are:", sum // 100, sum // 10 % 10, sum % 10)

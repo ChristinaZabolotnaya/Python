@@ -1,0 +1,6 @@
+numbers = []
+for i in range(15):
+  number = float(input("Введите число: "))
+  numbers.append(number)
+sum_alternating = -sum(numbers[::2])
+print("Сумма чередующихся чисел:", sum_alternating)

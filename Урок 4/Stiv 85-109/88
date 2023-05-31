@@ -1,0 +1,15 @@
+def median(a, b, c):
+    if a <= b <= c or c <= b <= a:
+        return b
+    elif b <= a <= c or c <= a <= b:
+        return a
+    else:
+        return c
+
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+c = float(input("Введите третье число: "))
+
+med = median(a, b, c)
+
+print("Медиана:", med)

@@ -1,0 +1,6 @@
+numbers = []
+for i in range(10):
+  number = int(input("Введите число: "))
+  numbers.append(number)
+sum_even = sum(number for number in numbers if number % 2 == 0)
+print("Сумма четных чисел:", sum_even)

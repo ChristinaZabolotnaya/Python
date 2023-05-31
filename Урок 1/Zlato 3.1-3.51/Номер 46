@@ -1,0 +1,11 @@
+k = int(input("Введите число k - "))
+num = ""
+for i in range(101, 151):
+    num += str(i)
+if k % 3 == 0:
+    digit = num[k-1]
+elif k % 3 == 1:
+    digit = num[(k-1)//3*9+(k-1)%3]
+else:
+    digit = num[(k-2)//3*9+(k-2)%3+6]
+print("k-я цифра - ", digit)

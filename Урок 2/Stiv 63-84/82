@@ -1,0 +1,9 @@
+q = int(input("Введите целое число: "))
+result = ""
+
+while q != 0:
+    r = q % 2
+    result = str(r) + result
+    q //= 2
+
+print(f"Двоичное представление числа: {result}")

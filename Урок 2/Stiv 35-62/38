@@ -1,0 +1,19 @@
+num_sides = int(input("Введите количество сторон фигуры: "))
+if num_sides < 3 or num_sides > 10:
+    print("Ошибка: введено некорректное количество сторон")
+elif num_sides == 3:
+    print("Треугольник")
+elif num_sides == 4:
+    print("Четырехугольник")
+elif num_sides == 5:
+    print("Пятиугольник")
+elif num_sides == 6:
+    print("Шестиугольник")
+elif num_sides == 7:
+    print("Семиугольник")
+elif num_sides == 8:
+    print("Восьмиугольник")
+elif num_sides == 9:
+    print("Девятиугольник")
+else:
+    print("Десятиугольник")

@@ -1,0 +1,6 @@
+n_4 = int(input("Введите четырехзначное число - "))
+n_5 = int(input("Введите пятизначное число - "))
+sum_4 = sum([int(digit) for digit in str(n_4)])
+sum_5 = sum([int(digit) for digit in str(n_5)])
+print(f"Сумма цифр четырехзначного числа - {sum_4}")
+print(f"Сумма цифр пятизначного числа - {sum_5}")

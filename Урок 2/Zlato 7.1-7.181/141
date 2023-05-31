@@ -1,0 +1,7 @@
+squares = []
+for i in range(10):
+  square = float(input(f"Введите площадь квадрата {i+1}: "))
+  squares.append(square)
+max_square = max(squares)
+diagonal = (2 * max_square) ** 0.5
+print(f"Длина диагонали самого большого квадрата: {diagonal}")

@@ -1,0 +1,7 @@
+a = int(input('a = '))
+b = int(input('b = '))
+h = int(input('h = '))
+d = int((a-b)/2)
+from math import sqrt
+c = float(sqrt(h ** 2 + d ** 2))
+print('P = ', a + b + c + c)

@@ -1,0 +1,7 @@
+monitor = int(input('monitor = '))
+block = int(input('block = '))
+klav = int(input('klav = '))
+mouse = int(input('mouse = '))
+print('3 comp = ', (monitor + block + klav + mouse) * 3)
+n = int(input('kolvo komp = '))
+print(n, 'komp cost = ', (monitor + block + klav + mouse) * n)

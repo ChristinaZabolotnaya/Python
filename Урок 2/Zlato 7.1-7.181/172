@@ -1,0 +1,9 @@
+results = []
+for i in range(22):
+  result = int(input(f"Введите результат спортсмена {i+1}: "))
+  results.append(result)
+
+max1 = max(results)
+results.remove(max1)
+max2 = max(results)
+print(f"Первое место занял спортсмен со временем {max1}, второе место - со временем {max2}")

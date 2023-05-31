@@ -1,0 +1,13 @@
+ a = int(input("Введите ширину лужайки в метрах: "))
+b = int(input("Введите длину лужайки в метрах: "))
+length = 0
+x, y = a, b
+while x > 1 and y > 1:
+  length += (x + y - 2) * 2
+  x -= 2
+  y -= 2
+if x == 1:
+  length += b - y + 1
+else:
+  length += a - x + 1
+print("Длина ограждения для спиральной дорожки:", length)

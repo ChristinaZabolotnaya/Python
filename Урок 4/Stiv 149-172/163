@@ -1,0 +1,32 @@
+import os
+
+boys_names = set()
+girls_names = set()
+
+for year in range(1900, 2013):
+    boys_filename = f"yob{year}.txt"
+    girls_filename = f"yob{year}f.txt"
+    if os.path.isfile(boys_filename):
+        with open(boys_filename, 'r') as f:
+            for line in f:
+                data = line.strip().split(',')
+                name = data[0]
+                count = int(data[2])
+                if count > 0 and name not in girls_names:
+                    boys_names.add(name)
+    if os.path.isfile(girls_filename):
+        with open(girls_filename, 'r') as f:
+            for line in f:
+                data = line.strip().split(',')
+                name = data[0]
+                count = int(data[2])
+                if count > 0 and name not in boys_names:
+                    girls_names.add(name)
+
+print("Самые популярные имена для мальчиков:")
+for name in sorted(boys_names):
+    print(name)
+print()
+print("Самые популярные имена для девочек:")
+for name in sorted(girls_names):
+    print(name)

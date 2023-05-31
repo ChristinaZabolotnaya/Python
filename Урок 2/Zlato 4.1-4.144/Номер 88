@@ -1,0 +1,8 @@
+birth_year, birth_month = map(int, input().split())
+today_year, today_month = map(int, input().split())
+age_years = today_year - birth_year
+age_months = today_month - birth_month
+if today_month < birth_month:
+  age_years -= 1
+  age_months += 12
+print(age_years, "лет", age_months, "месяцев")

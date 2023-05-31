@@ -1,0 +1,21 @@
+num = int(input("Введите четырехзначное число - "))
+sum_first_two = (num // 1000) + (num // 100 % 10)
+sum_last_two = (num % 100 // 10) + (num % 10)
+sum_digits = sum_first_two + sum_last_two
+product_digits = (num // 1000) * (num // 100 % 10) * (num % 100 // 10) * (num % 10)
+if sum_first_two == sum_last_two:
+  print("Сумма первых двух цифр равна сумме двух последних цифр.")
+else:
+  print("Сумма первых двух цифр не равна сумме двух последних цифр.")
+if sum_digits % 3 == 0:
+  print("Сумма цифр делится на три.")
+else:
+  print("Сумма цифр не делится на три.")
+if product_digits % 4 == 0:
+  print("Произведение цифр делится на четыре.")
+else:
+  print("Произведение цифр не делится на четыре.")
+if product_digits % num == 0:
+  print("Произведение цифр делится на число.")
+else:
+  print("Произведение цифр не делится на число.")

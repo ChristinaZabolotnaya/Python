@@ -1,0 +1,9 @@
+p = int(input("Введите количество чисел: "))
+nums = []
+for i in range(p):
+  num = float(input(f"Введите число {i+1}: "))
+  nums.append(num)
+count_positive = sum(1 for num in nums if num > 0)
+count_negative = sum(1 for num in nums if num < 0)
+print("Количество положительных чисел:", count_positive)
+print("Количество отрицательных чисел:", count_negative)

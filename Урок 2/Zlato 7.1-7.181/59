@@ -1,0 +1,6 @@
+grades = []
+for i in range(30):
+  grade = int(input(f"Введите оценку ученика {i+1}: "))
+  grades.append(grade)
+count_fives = grades.count(5)
+print("Количество пятерок:", count_fives)

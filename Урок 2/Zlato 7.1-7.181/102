@@ -1,0 +1,12 @@
+students = []
+while True:
+  name = input("Введите имя ученика ('стоп' для завершения ввода): ")
+  if name == 'стоп':
+    break
+  height = int(input("Введите рост ученика: "))
+  students.append((name, height))
+is_sorted = all(students[i][1] >= students[i+1][1] for i in range(len(students)-1))
+if is_sorted:
+  print("Ученики перечислены в порядке убывания их роста.")
+else:
+  print("Ученики не перечислены в порядке убывания их роста.")

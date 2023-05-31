@@ -1,0 +1,6 @@
+x = int(input("Введите натуральное число x: "))
+y = int(input("Введите натуральное число y: "))
+product = 0
+for i in range(x):
+  product += y
+print("Произведение:", product)

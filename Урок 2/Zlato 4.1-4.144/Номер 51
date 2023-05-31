@@ -1,0 +1,10 @@
+num = input("Введите трехзначное число - ")
+if '6' in num:
+  print("цифра 6 есть в номере.")
+else:
+  print("цифры 6 нет в номере.")
+digit = input("Введите число - ")
+if digit in num:
+  print(f"цифра {digit} есть в номере.")
+else:
+  print(f"цифра {digit} нет в номере.")

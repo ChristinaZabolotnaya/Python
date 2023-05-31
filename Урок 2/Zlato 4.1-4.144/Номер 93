@@ -1,0 +1,5 @@
+k = int(input())
+if k % 7 == 0 or k % 7 == 1:
+  print("Будний день")
+else:
+  print("Выходной день")

@@ -1,0 +1,2 @@
+a = int(input('storona = '))
+print('P =', 4 * a)

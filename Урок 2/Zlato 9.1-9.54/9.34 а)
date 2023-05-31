@@ -1,0 +1,7 @@
+p = int(input("Введите сумму: "))
+count = 0
+for i in range(p//10 + 1):
+    for j in range((p-10*i)//5 + 1):
+        for k in range((p-10*i-5*j)//2 + 1):
+            count += 1
+print("Количество способов выплаты:", count)

@@ -1,0 +1,16 @@
+n = int(input("Введите количество покупателей: "))
+times = []
+for i in range(n):
+  time = float(input(f"Введите время обслуживания покупателя {i+1}: "))
+  times.append(time)
+waiting_times = []
+for i in range(n):
+  waiting_time = sum(times[:i])
+  waiting_times.append(waiting_time)
+min_waiting_time = min(waiting_times)
+last_min_index = None
+for i in range(n-1, -1, -1):
+  if waiting_times[i] == min_waiting_time:
+    last_min_index = i
+    break
+print(f"Самое малое время пребывания в очереди у покупателя под номером {last_min_index+1}")

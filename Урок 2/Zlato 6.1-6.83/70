@@ -1,0 +1,11 @@
+a = int(input("Введите ширину прямоугольника: "))
+b = int(input("Введите высоту прямоугольника: "))
+count = 0
+while a > 0 and b > 0:
+  if a > b:
+    count += a // b
+    a %= b
+  else:
+    count += b // a
+    b %= a
+print("Размеры квадратов и их количество:", count)

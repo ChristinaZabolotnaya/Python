@@ -1,0 +1,18 @@
+n = int(input("Введите количество чисел: "))
+numbers = []
+for i in range(n):
+  number = int(input(f"Введите число {i+1}: "))
+  numbers.append(number)
+max_number = None
+max_index = None
+min_number = None
+min_index = None
+for i in range(n):
+  if max_number is None or numbers[i] > max_number:
+    max_number = numbers[i]
+    max_index = i
+  if min_number is None or numbers[i] < min_number:
+    min_number = numbers[i]
+    min_index = i
+print(f"Номер максимального числа: {max_index+1}")
+print(f"Номер минимального числа: {min_index+1}")

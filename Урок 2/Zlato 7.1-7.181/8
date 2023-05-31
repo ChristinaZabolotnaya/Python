@@ -1,0 +1,10 @@
+numbers = []
+while True:
+  number = int(input("Введите число (0 - для окончания ввода): "))
+  if number == 0:
+    break
+  numbers.append(number)
+sum_numbers = sum(numbers)
+count_numbers = len(numbers)
+print("Сумма чисел равна", sum_numbers)
+print("Количество чисел равно", count_numbers)

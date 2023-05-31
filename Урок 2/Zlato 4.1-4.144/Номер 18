@@ -1,0 +1,12 @@
+area_circle = int(input("Введите число area_circle - "))
+area_square = int(input("Введите число area_square - "))
+side_square = int(input("Введите число side_square - "))
+radius_circle = int(input("Введите число - "))
+if side_square >= 2 * radius_circle:
+  print("Круг может поместиться внутри квадрата.")
+else:
+  print("Круг не может поместиться внутри квадрата.")
+if radius_circle >= side_square / math.sqrt(2):
+  print("Квадрат может поместиться внутри круга.")
+else:
+  print("Квадрат не может поместиться внутри круга.")

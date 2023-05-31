@@ -1,0 +1,22 @@
+def is_in_array(num, arr):
+    return num in arr
+
+m1 = [int(i) for i in input("Введите элементы массива m1: ").split()]
+m2 = [int(i) for i in input("Введите элементы массива m2: ").split()]
+m3 = [int(i) for i in input("Введите элементы массива m3: ").split()]
+
+count_m1 = 0
+count_m2 = 0
+
+for num in m3:
+    if is_in_array(num, m1):
+        count_m1 += 1
+    if is_in_array(num, m2):
+        count_m2 += 1
+
+if count_m1 > count_m2:
+    print("В массиве m1 больше чисел, имеющихся в массиве m3")
+elif count_m2 > count_m1:
+    print("В массиве m2 больше чисел, имеющихся в массиве m3")
+else:
+    print("Количество чисел в массивах m1 и m2 равно")

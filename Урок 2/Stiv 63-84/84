@@ -1,0 +1,20 @@
+import random
+
+def simulate():
+    flips = ""
+    count = 0
+    while "HHH" not in flips and "TTT" not in flips:
+        result = random.choice(["H", "T"])
+        flips += result
+        count += 1
+        print(result, end=" ")
+    print(f"(попыток: {count})")
+    return count
+
+total_count = 0
+for i in range(10):
+    print(f"Симуляция {i+1}: ", end="")
+    total_count += simulate()
+
+average_count = total_count / 10
+print(f"Среднее количество попыток: {average_count:.1f}")

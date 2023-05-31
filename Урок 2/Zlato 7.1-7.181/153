@@ -1,0 +1,10 @@
+numbers = [int(input(f"Введите число {i+1}: ")) for i in range(14)]
+max_even = None
+for number in numbers:
+  if number % 2 == 0:
+    if max_even is None or number > max_even:
+      max_even = number
+if max_even is None:
+  print("Среди заданных чисел нет четных")
+else:
+  print(f"Максимальное четное число: {max_even}")

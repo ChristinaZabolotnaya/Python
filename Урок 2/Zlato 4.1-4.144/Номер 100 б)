@@ -1,0 +1,6 @@
+a = float(input())
+b = float(input())
+max_num = a if a > b else b
+print("Максимальное число:", max_num)
+min_num = a if a < b else b
+print("Минимальное число:", min_num)

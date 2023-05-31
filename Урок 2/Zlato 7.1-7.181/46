@@ -1,0 +1,9 @@
+n = int(input("Введите количество чисел: "))
+numbers = []
+for i in range(n):
+  number = int(input("Введите число: "))
+  numbers.append(number)
+a1_an = numbers[0] + numbers[-1]
+a2_an1 = numbers[1] - numbers[-2]
+print("a1 + an =", a1_an)
+print("a2 - a(n-1) =", a2_an1)

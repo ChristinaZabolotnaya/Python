@@ -1,0 +1,4 @@
+num = 546
+second_digit = num // 10
+x = int(str(second_digit) + str(num)[-1] + str(num)[0])
+print("Число x равно", x)

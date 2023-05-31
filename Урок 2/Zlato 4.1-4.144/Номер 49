@@ -1,0 +1,10 @@
+num = input("Введите двузначное число - ")
+if '3' in num:
+  print("Цифра 3 в номере.")
+else:
+  print("Цифра 3 не в номере.")
+digit = input("Введите цифру - ")
+if digit in num:
+  print(f"Число {digit} находится в числе.")
+else:
+  print(f"Число {digit} не находится в числе.")

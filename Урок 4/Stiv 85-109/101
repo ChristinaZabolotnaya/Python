@@ -1,0 +1,11 @@
+import random
+
+def generateLicensePlate():
+    old_format = "".join([chr(random.randint(65, 90)) for i in range(3)]) + \
+                 "".join([str(random.randint(0, 9)) for i in range(3)])
+    new_format = str(random.randint(1000, 9999)) + \
+                 "".join([chr(random.randint(65, 90)) for i in range(3)])
+    return random.choice([old_format, new_format])
+
+if __name__ == "__main__":
+    print("Generated license plate:", generateLicensePlate())

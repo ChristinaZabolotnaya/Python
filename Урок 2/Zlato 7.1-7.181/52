@@ -1,0 +1,16 @@
+numbers = []
+for i in range(14):
+  number = int(input(f"Введите число {i+1}: "))
+  numbers.append(number)
+sum_gt_20 = sum(number for number in numbers if number > 20)
+print("Сумма чисел, больших 20:", sum_gt_20)
+if sum_gt_20 > 100:
+  print("Сумма чисел, больших 20, превышает 100")
+else:
+  print("Сумма чисел, больших 20, не превышает 100")
+sum_lt_50 = sum(number for number in numbers if number < 50)
+print("Сумма чисел, меньших 50:", sum_lt_50)
+if sum_lt_50 % 2 == 0:
+  print("Сумма чисел, меньших 50, является четным числом")
+else:
+  print("Сумма чисел, меньших 50, не является четным числом")

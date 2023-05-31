@@ -1,0 +1,4 @@
+a = int(input("Enter the first two-digit number: "))
+b = int(input("Enter the second two-digit number: "))
+diff = (a // 10 - a % 10) - (b // 10 - b % 10)
+print("The digits of the difference are:", diff // 10, diff % 10)

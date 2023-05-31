@@ -1,0 +1,14 @@
+n = int(input("Введите натуральное число: "))
+same_digits = True
+prev_digit = n % 10
+while n > 0:
+  digit = n % 10
+  if digit != prev_digit:
+    same_digits = False
+    break
+  prev_digit = digit
+  n //= 10
+if same_digits:
+  print("Число состоит из одинаковых цифр")
+else:
+  print("Число не состоит из одинаковых цифр")

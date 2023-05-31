@@ -1,0 +1,7 @@
+width = 425
+height = 131
+count = 0
+while width >= height:
+  count += (width // height) ** 2
+  width, height = height, width - height * (width // height)
+print("Размеры квадратов и их количество:", count)

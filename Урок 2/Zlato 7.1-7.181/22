@@ -1,0 +1,11 @@
+set1 = []
+set2 = []
+for i in range(8):
+  item1 = float(input("Введите стоимость предмета в первом наборе: "))
+  set1.append(item1)
+  item2 = float(input("Введите стоимость предмета во втором наборе: "))
+  set2.append(item2)
+if sum(set1) < sum(set2):
+  print("Первый набор предметов более дешевый")
+else:
+  print("Второй набор предметов более дешевый")

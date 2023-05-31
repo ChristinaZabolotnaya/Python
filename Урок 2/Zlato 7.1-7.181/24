@@ -1,0 +1,13 @@
+p = int(input("Введите натуральное число: "))
+s = float(input("Введите вещественное число: "))
+numbers = []
+for i in range(p):
+  number = float(input("Введите вещественное число: "))
+  numbers.append(number)
+product = 1
+for n in numbers:
+  product *= n
+if product > s:
+  print("Произведение вещественных чисел больше", s)
+else:
+  print("Произведение вещественных чисел не больше", s)

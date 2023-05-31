@@ -1,0 +1,12 @@
+import math
+n = float(input("Введите угол, на который повернулась часовая стрелка - "))
+hours = int(n // 30)
+minutes = int((n % 30) * 2)
+minute = n * 12
+if minute > 360:
+    minute -= 360
+minute_hours = int(minute // 30)
+minute_minutes = int((minute % 30) * 2)
+print("Угол для минутной стрелки - ", minute)
+print("Количество полных часов - ", hours)
+print("Количество полных минут - ", minutes)

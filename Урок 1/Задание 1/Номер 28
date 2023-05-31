@@ -1,0 +1,5 @@
+a = int(input('a = '))
+b = int(input('b = '))
+ygol = int(input('ygol = '))
+from math import tan
+print('S = ', 0.5 * (a ** 2 - b ** 2) * tan(ygol))

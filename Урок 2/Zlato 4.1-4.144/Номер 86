@@ -1,0 +1,6 @@
+bd_year, bd_month, bd_day = map(int, input().split())
+today_year, today_month, today_day = map(int, input().split())
+age = today_year - bd_year
+if today_month < bd_month or (today_month == bd_month and today_day < bd_day):
+  age -= 1
+print(age)

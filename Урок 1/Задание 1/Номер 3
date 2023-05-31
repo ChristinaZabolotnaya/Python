@@ -1,0 +1,3 @@
+storona = float(input())
+from math import sqrt, sin
+print(sqrt((2 * storona + sin(abs(3 * storona))) / 3.56))

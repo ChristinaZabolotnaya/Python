@@ -1,0 +1,10 @@
+numbers = []
+while True:
+  number = int(input("Введите число (0 - для окончания ввода): "))
+  if number == 0:
+    break
+  numbers.append(number)
+result = 1
+for number in numbers:
+  result *= number
+  print(result)

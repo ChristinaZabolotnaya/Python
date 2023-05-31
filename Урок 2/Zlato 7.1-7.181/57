@@ -1,0 +1,10 @@
+precipitations = []
+for i in range(1, 29):
+  precipitation = int(input(f"Введите количество осадков за {i} число: "))
+  precipitations.append(precipitation)
+sum_even = sum(precipitations[i] for i in range(1, 29, 2))
+sum_odd = sum(precipitations[i] for i in range(0, 29, 2))
+if sum_even > sum_odd:
+  print("По четным числам больше осадков, чем по нечетным")
+else:
+  print("По нечетным числам больше осадков, чем по четным")

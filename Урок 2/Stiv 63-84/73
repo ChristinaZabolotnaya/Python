@@ -1,0 +1,15 @@
+phrase = input("Введите фразу для шифрования: ")
+shift = int(input("Введите количество символов для сдвига: "))
+
+encrypted_phrase = ""
+for letter in phrase:
+    if letter.isalpha():
+        if letter.isupper():
+            encrypted_letter = chr((ord(letter) - ord('A') + shift) % 26 + ord('A'))
+        else:
+            encrypted_letter = chr((ord(letter) - ord('a') + shift) % 26 + ord('a'))
+    else:
+        encrypted_letter = letter
+    encrypted_phrase += encrypted_letter
+
+print(f"Зашифрованная фраза: {encrypted_phrase}")

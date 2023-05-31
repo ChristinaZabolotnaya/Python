@@ -1,0 +1,10 @@
+heights = []
+for i in range(25):
+  height = int(input(f"Введите рост ученика {i+1}: "))
+  heights.append(height)
+male_heights = [x for x in heights if x < 0]
+female_heights = [x for x in heights if x >= 0]
+mean_male = sum(male_heights) / len(male_heights)
+mean_female = sum(female_heights) / len(female_heights)
+print(f"Средний рост мальчиков: {mean_male}")
+print(f"Средний рост девочек: {mean_female}")

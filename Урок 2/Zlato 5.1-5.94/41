@@ -1,0 +1,11 @@
+num = int(input())
+n = int(input())
+sum_n = 0
+prod_n = 1
+for i in range(n):
+  digit = num % 10
+  sum_n += digit
+  prod_n *= digit
+  num //= 10
+print("Сумма последних", n, "цифр числа:", sum_n)
+print("Произведение последних", n, "цифр числа:", prod_n)

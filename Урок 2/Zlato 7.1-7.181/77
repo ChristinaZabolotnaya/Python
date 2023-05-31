@@ -1,0 +1,17 @@
+team1_removals = []
+team2_removals = []
+while True:
+  team = int(input("Введите номер команды для удаления (или 0 для окончания игры): "))
+  if team == 0:
+    break
+  duration = int(input("Введите продолжительность удаления (2, 5 или 10 минут): "))
+  if team == 1:
+    team1_removals.append(duration)
+  else:
+    team2_removals.append(duration)
+total_team1_removals = len(team1_removals)
+total_team2_removals = len(team2_removals)
+total_team1_removal_time = sum(team1_removals)
+total_team2_removal_time = sum(team2_removals)
+print("Команда 1: общее число удалений =", total_team1_removals, ", общее время удалений =", total_team1_removal_time)
+print("Команда 2: общее число удалений =", total_team2_removals, ", общее время удалений =", total_team2_removal_time)

@@ -1,0 +1,8 @@
+def sum_input():
+    num = input("Введите число: ")
+    if num == '':
+        return 0.0
+    else:
+        return float(num) + sum_input()
+
+print("Сумма введенных чисел:", sum_input())

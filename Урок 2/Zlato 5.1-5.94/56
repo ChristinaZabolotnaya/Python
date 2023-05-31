@@ -1,0 +1,11 @@
+import math
+a = math.pi/12
+b = math.pi/6
+n = 1000
+h = (b-a)/n
+summa = 0
+for i in range(n):
+  x1 = a + i*h
+  x2 = a + (i+1)*h
+  summa += (math.sin(x1)+math.sin(x2))/2*h
+print("Приближенная площадь одной арки синусоиды:", summa)

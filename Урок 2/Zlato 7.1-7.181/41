@@ -1,0 +1,8 @@
+n = int(input("Введите количество чисел: "))
+numbers = []
+for i in range(n):
+  number = float(input("Введите число: "))
+  numbers.append(number)
+threshold = float(input("Введите пороговое значение: "))
+sum_gt_threshold = sum(number for number in numbers if number > threshold)
+print("Сумма чисел, больших {}: {}".format(threshold, sum_gt_threshold))

@@ -1,0 +1,9 @@
+p = int(input("Введите количество троек чисел: "))
+triplets = []
+for i in range(p):
+  a = int(input(f"Введите число a для тройки {i+1}: "))
+  b = int(input(f"Введите число b для тройки {i+1}: "))
+  c = int(input(f"Введите число c для тройки {i+1}: "))
+  triplets.append((a, b, c))
+count_valid_triplets = sum(1 for triplet in triplets if triplet[0]+triplet[1]>triplet[2])
+print("Количество возможных треугольников:", count_valid_triplets)

@@ -1,0 +1,23 @@
+n = int(input())
+years = n // 12
+months = n % 12
+if years == 0:
+  print(months, "месяцев")
+elif years == 1:
+  if months == 0:
+    print(years, "год ровно")
+  elif months == 1:
+    print(years, "год", months, "месяц")
+  elif months in [2, 3, 4]:
+    print(years, "год", months, "месяца")
+  else:
+    print(years, "год", months, "месяцев")
+else:
+  if months == 0:
+    print(years, "лет ровно")
+  elif months == 1:
+    print(years, "лет", months, "месяц")
+  elif months in [2, 3, 4]:
+    print(years, "лет", months, "месяца")
+  else:
+    print(years, "лет", months, "месяцев")

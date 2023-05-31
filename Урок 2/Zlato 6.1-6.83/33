@@ -1,0 +1,19 @@
+year = 1
+area = 100
+harvest = area * 20
+while harvest <= 800:
+  year += 1
+  area += area * 0.05
+  harvest += harvest * 0.02
+print("Урожайность превысит 22 ц/га в", year, "-м году")
+while area <= 120:
+  year += 1
+  area += area * 0.05
+  harvest += harvest * 0.02
+print("Площадь участка станет больше 120 га в", year, "-м году")
+total_harvest = harvest
+for i in range(2, year+1):
+  area += area * 0.05
+  harvest += harvest * 0.02
+  total_harvest += harvest
+print("Общий урожай превысит 800 ц в", year, "-м году, общий урожай =", total_harvest, "ц")

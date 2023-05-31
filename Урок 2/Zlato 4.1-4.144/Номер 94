@@ -1,0 +1,11 @@
+k = int(input())
+if k <= 11:
+  print(k)
+elif k <= 192:
+  n = (k - 12) // 2 + 10
+  if k % 2 == 0:
+    print(n % 10)
+  else:
+    print(n // 10)
+else:
+  print(k - 192)

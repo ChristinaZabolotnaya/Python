@@ -1,0 +1,8 @@
+bd_year1, bd_month1, bd_day1 = map(int, input().split())
+bd_year2, bd_month2, bd_day2 = map(int, input().split())
+if bd_year1 < bd_year2 or (bd_year1 == bd_year2 and bd_month1 < bd_month2) or (bd_year1 == bd_year2 and bd_month1 == bd_month2 and bd_day1 < bd_day2):
+  print("Первый человек старше")
+elif bd_year1 == bd_year2 and bd_month1 == bd_month2 and bd_day1 == bd_day2:
+  print("Оба родились в один день")
+else:
+  print("Второй человек старше")

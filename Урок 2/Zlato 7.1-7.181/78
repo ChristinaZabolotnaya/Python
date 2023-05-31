@@ -1,0 +1,13 @@
+n = int(input("Введите количество учеников: "))
+marks = []
+for i in range(n):
+  mark = int(input(f"Введите оценку ученика {i+1}: "))
+  marks.append(mark)
+count_5 = marks.count(5)
+count_4 = marks.count(4)
+count_3 = marks.count(3)
+count_2 = marks.count(2)
+print("Количество пятерок:", count_5)
+print("Количество четверок:", count_4)
+print("Количество троек:", count_3)
+print("Количество двоек:", count_2)

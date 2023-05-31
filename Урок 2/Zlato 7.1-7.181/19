@@ -1,0 +1,12 @@
+this_year = []
+last_year = []
+for i in range(28):
+  this_year_rain = int(input("Введите количество осадков за день в этом году: "))
+  this_year.append(this_year_rain)
+for i in range(28):
+  last_year_rain = int(input("Введите количество осадков за день в прошлом году: "))
+  last_year.append(last_year_rain)
+if sum(this_year) > sum(last_year):
+  print("Общее количество осадков за этот месяц превысило прошлогоднее")
+else:
+  print("Общее количество осадков за этот месяц не превысило прошлогоднее")

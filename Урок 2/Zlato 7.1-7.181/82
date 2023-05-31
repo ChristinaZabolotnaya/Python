@@ -1,0 +1,12 @@
+p = int(input("Введите количество чисел: "))
+a = []
+for i in range(p):
+  a.append(int(input(f"Введите число {i+1}: ")))
+count_equal_pairs = sum(1 for i in range(p-1) if a[i] == a[i+1])
+count_zero_pairs = sum(1 for i in range(p-1) if a[i] == 0 and a[i+1] == 0)
+count_even_pairs = sum(1 for i in range(p-1) if a[i] % 2 == 0 and a[i+1] % 2 == 0)
+count_5_pairs = sum(1 for i in range(p-1) if a[i] % 10 == 5 and a[i+1] % 10 == 5)
+print("Количество пар 'соседних' чисел, равных между собой:", count_equal_pairs)
+print("Количество пар 'соседних' чисел, равных нулю:", count_zero_pairs)
+print("Количество пар 'соседних' четных чисел:", count_even_pairs)
+print("Количество пар 'соседних' чисел, оканчивающихся на 5:", count_5_pairs)

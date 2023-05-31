@@ -1,0 +1,22 @@
+magnitude = float(input("Введите магнитуду землетрясения: "))
+
+if magnitude < 2.0:
+    description = "Минимальное"
+elif magnitude < 3.0:
+    description = "Очень слабое"
+elif magnitude < 4.0:
+    description = "Слабое"
+elif magnitude < 5.0:
+    description = "Промежуточное"
+elif magnitude < 6.0:
+    description = "Умеренное"
+elif magnitude < 7.0:
+    description = "Сильное"
+elif magnitude < 8.0:
+    description = "Очень сильное"
+elif magnitude < 10.0:
+    description = "Огромное"
+else:
+    description = "Разрушительное"
+
+print(f"Магнитуда {magnitude} соответствует уровню землетрясения: {description}")

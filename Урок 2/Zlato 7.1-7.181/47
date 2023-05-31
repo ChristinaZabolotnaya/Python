@@ -1,0 +1,8 @@
+costs = []
+while True:
+  cost = float(input("Введите стоимость товара: "))
+  if cost == 0:
+    break
+  costs.append(cost)
+total_cost = sum(cost for cost in costs if cost > 1000)
+print("Общая стоимость товаров, дороже 1000 рублей:", total_cost)

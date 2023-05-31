@@ -1,0 +1,9 @@
+t = int(input("Введите количество чисел: "))
+d = []
+for i in range(t):
+  d.append(int(input(f"Введите число d{i+1}: ")))
+count_positive = sum(1 for num in d if num > 0)
+if count_positive % 3 == 0:
+  print("Количество положительных чисел, кратных трем:", count_positive // 3)
+else:
+  print("Количество положительных чисел, кратных трем, не является целым числом")

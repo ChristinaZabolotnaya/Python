@@ -1,0 +1,5 @@
+count_fifteen = 0
+for i in range(100, 501):
+  if sum(int(digit) for digit in str(i)) == 15:
+    count_fifteen += 1
+print(count_fifteen)

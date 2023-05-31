@@ -1,0 +1,9 @@
+a = int(input())
+b = int(input())
+c = int(input())
+if a % 2 == 0:
+  print("Первое число четное")
+if b % 2 == 0:
+  print("Второе число четное")
+if c % 2 == 0:
+  print("Третье число четное")

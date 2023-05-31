@@ -1,0 +1,37 @@
+n = int(input("Введите натуральное число: "))
+sum_digits = 0
+prod_digits = 1
+count_digits = 0
+first_digit = n % 10
+last_digit = first_digit
+while n > 0:
+  digit = n % 10
+  sum_digits += digit
+  prod_digits *= digit
+  count_digits += 1
+  last_digit = digit
+  n //= 10
+if sum_digits > 10:
+  print("Сумма цифр больше 10")
+else:
+  print("Сумма цифр не больше 10")
+if prod_digits < 50:
+  print("Произведение цифр меньше 50")
+else:
+  print("Произведение цифр не меньше 50")
+if count_digits % 2 == 0:
+  print("Количество цифр четное")
+else:
+  print("Количество цифр нечетное")
+if first_digit <= 6:
+  print("Первая цифра не превышает 6")
+else:
+  print("Первая цифра больше 6")
+if first_digit == last_digit:
+  print("Число начинается и заканчивается одной и той же цифрой")
+else:
+  print("Число не начинается и не заканчивается одной и той же цифрой")
+if first_digit > last_digit:
+  print("Первая цифра больше последней")
+else:
+  print("Последняя цифра больше первой")

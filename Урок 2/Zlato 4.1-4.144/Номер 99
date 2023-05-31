@@ -1,0 +1,7 @@
+a = float(input())
+b = float(input())
+max_num = a if a > b else b
+print(max_num)
+max_num = a if a > b else None
+max_num = max_num or b
+print(max_num)

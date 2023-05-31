@@ -1,0 +1,4 @@
+max_num = 5000
+while max_num % 139 != 0:
+  max_num -= 1
+print(max_num)

@@ -1,0 +1,11 @@
+filename = input("Введите имя файла: ")
+output_filename = input("Введите имя файла для сохранения: ")
+try:
+    with open(filename, 'r') as f, open(output_filename, 'w') as output_f:
+        for line in f:
+            if '#' in line:
+                line = line[:line.index('#')]
+            output_f.write(line)
+    print("Комментарии удалены успешно")
+except FileNotFoundError:
+    print("Файл не найден")

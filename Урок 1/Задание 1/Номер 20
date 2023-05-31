@@ -1,0 +1,9 @@
+e = float(input('e ='))
+f = float(input('f ='))
+g = float(input('g ='))
+h = float(input('h ='))
+from math import sqrt, sin, cos
+k = abs(e - 3 / f) ** 3 + g
+print('a =', sqrt(k))
+print('b =', sin(e) + cos(h) ** 2)
+print('c =', (33 * g) / (e * f - 3))

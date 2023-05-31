@@ -1,0 +1,10 @@
+deposit = 1000
+growth_rate = 0.02
+growth = []
+total_deposit = []
+for i in range(1, 11):
+  growth.append(deposit*growth_rate)
+  deposit += deposit*growth_rate
+  total_deposit.append(deposit)
+print("Прирост суммы вклада за первый, второй,..., десятый месяц:", growth)
+print("Сумма вклада через три, четыре, ..., двенадцать месяцев:", total_deposit[2:])

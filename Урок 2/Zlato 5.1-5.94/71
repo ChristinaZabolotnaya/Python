@@ -1,0 +1,5 @@
+import math
+summa = 0
+for i in range(50, 0, -1):
+  summa = math.sqrt(i + summa)
+print("Результат:", summa)

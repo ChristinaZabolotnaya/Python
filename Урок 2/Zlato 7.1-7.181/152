@@ -1,0 +1,15 @@
+a = [float(input(f"Введите число a{i+1}: ")) for i in range(15)]
+p = float(input("Введите число p: "))
+closest_number = None
+closest_index = None
+min_distance = None
+for i in range(15):
+  if a[i] < p:
+    distance = p - a[i]
+  else:
+    distance = a[i] - p
+  if min_distance is None or distance < min_distance:
+    min_distance = distance
+    closest_number = a[i]
+    closest_index = i
+print(f"Ближайшее число к {p} - это {closest_number}, его порядковый номер: {closest_index+1}")

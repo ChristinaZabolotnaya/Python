@@ -1,0 +1,7 @@
+x = int(input("Введите число x: "))
+sequence = []
+for i in range(12):
+  sequence.append(int(input(f"Введите число a{i+1}: ")))
+filtered_sequence = [x for x in sequence if x > x]
+mean = sum(filtered_sequence) / len(filtered_sequence)
+print(f"Среднее арифметическое чисел, больших {x}: {mean}")

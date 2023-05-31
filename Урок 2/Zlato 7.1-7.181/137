@@ -1,0 +1,3 @@
+distances = [1100, 1400, 1700, 2000, 2300]
+farthest_distance = max(distances)
+print(f"Самое удаленное от Москвы расстояние: {farthest_distance}")

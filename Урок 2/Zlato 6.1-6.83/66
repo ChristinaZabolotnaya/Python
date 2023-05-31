@@ -1,0 +1,15 @@
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+while a != b:
+  if a > b:
+    a, b = b, a - b
+  else:
+    b, a = a, b - a
+gcd = a
+while gcd != c:
+  if gcd > c:
+    gcd, c = c, gcd - c
+  else:
+    c, gcd = gcd, c - gcd
+print("Наибольший общий делитель:", gcd)

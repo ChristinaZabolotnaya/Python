@@ -1,0 +1,20 @@
+def count_letter_percent(sentence, letter):
+    count = 0
+    for char in sentence:
+        if char == letter:
+            count += 1
+    return (count / len(sentence)) * 100
+
+sentence1 = input("Введите первое предложение: ")
+sentence2 = input("Введите второе предложение: ")
+letter = 'о'
+
+percent1 = count_letter_percent(sentence1, letter)
+percent2 = count_letter_percent(sentence2, letter)
+
+if percent1 > percent2:
+    print("В первом предложении доля буквы", letter, "больше")
+elif percent1 < percent2:
+    print("Во втором предложении доля буквы", letter, "больше")
+else:
+    print("Доля буквы", letter, "одинакова в обоих предложениях")

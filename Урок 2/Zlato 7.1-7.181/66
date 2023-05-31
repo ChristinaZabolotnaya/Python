@@ -1,0 +1,8 @@
+nums = []
+while True:
+  num = float(input("Введите следующее число последовательности: "))
+  nums.append(num)
+  if num >= 0:
+    break
+count_negatives = len(nums) - 1
+print("Количество отрицательных чисел в начале последовательности:", count_negatives)

@@ -1,0 +1,11 @@
+k = int(input())
+if k == 11:
+  print("Валет")
+elif k == 12:
+  print("Дама")
+elif k == 13:
+  print("Король")
+elif k == 14:
+  print("Туз")
+else:
+  print(k)

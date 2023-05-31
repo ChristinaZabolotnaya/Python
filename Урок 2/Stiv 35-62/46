@@ -1,0 +1,17 @@
+coordinates = input("Введите координаты клетки на шахматной доске (буква и цифра): ")
+
+letter = coordinates[0]
+number = int(coordinates[1])
+
+if letter in ['a', 'c', 'e', 'g']:
+    if number % 2 == 0:
+        color = "белая"
+    else:
+        color = "черная"
+else:
+    if number % 2 == 0:
+        color = "черная"
+    else:
+        color = "белая"
+
+print(f"Клетка {coordinates} имеет {color} цвет")

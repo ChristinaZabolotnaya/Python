@@ -1,0 +1,17 @@
+def precedence(operator):
+    if operator in "+-":
+        return 1
+    elif operator in "*/":
+        return 2
+    elif operator == "^":
+        return 3
+    else:
+        return -1
+
+if __name__ == "__main__":
+    operator = input("Enter an operator (+, -, *, /, ^): ")
+    p = precedence(operator)
+    if p == -1:
+        print("Invalid operator")
+    else:
+        print("Precedence:", p)

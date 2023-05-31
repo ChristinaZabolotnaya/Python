@@ -1,0 +1,18 @@
+def simplifyFraction(num, denom):
+    if num == 0:
+        return (0, 1)
+    gcd = findGCD(num, denom)
+    return (num // gcd, denom // gcd)
+
+def findGCD(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+if __name__ == "__main__":
+    num = int(input("Enter the numerator: "))
+    denom = int(input("Enter the denominator: "))
+    
+    simplified = simplifyFraction(num, denom)
+    
+    print(f"Simplified fraction: {simplified[0]}/{simplified[1]}")

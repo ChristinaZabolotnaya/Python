@@ -1,0 +1,6 @@
+rainfalls = []
+for i in range(31):
+  rainfall = float(input("Введите количество осадков за день: "))
+  rainfalls.append(rainfall)
+total_rainfall = sum(rainfalls[i] for i in range(1, 31, 2))
+print("Общее количество осадков на четных днях месяца:", total_rainfall)

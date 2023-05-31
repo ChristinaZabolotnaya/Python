@@ -1,0 +1,6 @@
+numbers = []
+for i in range(10):
+  number = int(input("Введите число: "))
+  numbers.append(number)
+sum_ends_zero = sum(number for number in numbers if number % 10 == 0)
+print("Сумма чисел, оканчивающихся на ноль:", sum_ends_zero)

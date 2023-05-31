@@ -1,0 +1,8 @@
+n = int(input("Введите количество чисел: "))
+numbers = list(map(int, input("Введите числа через пробел: ").split()))
+max_num = max(numbers)
+min_num = min(numbers)
+if max_num - min_num <= 25:
+  print("Максимальное число не превышает минимальное не более чем на 25")
+else:
+  print("Максимальное число превышает минимальное более чем на 25")

@@ -1,0 +1,7 @@
+marks = []
+for i in range(12):
+  marks.append(int(input(f"Введите оценку по предмету {i+1}: ")))
+if 3 not in marks:
+  print("Среди оценок нет троек")
+else:
+  print("Среди оценок есть тройки")

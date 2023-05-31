@@ -1,0 +1,10 @@
+a = int(input("Введите число a - "))
+b = int(input("Введите число b - "))
+c = int(input("Введите число c - "))
+discriminant = b**2 - 4*a*c
+if discriminant >= 0:
+  x1 = (-b + math.sqrt(discriminant)) / (2*a)
+  x2 = (-b - math.sqrt(discriminant)) / (2*a)
+  print("Корни уравнения -", x1, " и ", x2)
+else:
+  print("Уравнение не имеет действительных корней")

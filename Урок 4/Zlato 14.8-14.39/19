@@ -1,0 +1,19 @@
+def is_even(x):
+    return x % 2 == 0
+
+a = [int(i) for i in input("Введите последовательность a: ").split()]
+b = [int(i) for i in input("Введите последовательность b: ").split()]
+
+even_count = 0
+odd_count = 0
+
+for num in a:
+    if is_even(num):
+        even_count += 1
+
+for num in b:
+    if not is_even(num):
+        odd_count += 1
+
+print("Количество четных чисел в первой последовательности:", even_count)
+print("Количество нечетных чисел во второй последовательности:", odd_count)

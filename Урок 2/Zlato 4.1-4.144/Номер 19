@@ -1,0 +1,13 @@
+import math
+area_circle = 25 * math.pi 
+area_triangle = 36 * math.sqrt(3) / 4 
+side_triangle = math.sqrt(4 * area_triangle / math.sqrt(3)) 
+radius_circle = math.sqrt(area_circle / math.pi) 
+if side_triangle >= 2 * radius_circle:
+  print("Круг может поместиться внутри треугольника.")
+else:
+  print("Круг не может поместиться внутри треугольника.")
+if radius_circle >= side_triangle / math.sqrt(3):
+  print("Треугольник может поместиться внутри круга.")
+else:
+  print("Треугольник не может поместиться внутри круга.")

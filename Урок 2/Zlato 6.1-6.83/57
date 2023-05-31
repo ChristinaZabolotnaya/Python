@@ -1,0 +1,21 @@
+n = int(input("Введите натуральное число: "))
+a = int(input("Введите цифру a: "))
+b = int(input("Введите цифру b: "))
+has_a = False
+has_b = False
+while n > 0:
+  digit = n % 10
+  if digit == a and not has_a:
+    has_a = True
+    pos_a = len(str(n)) - str(n).index(str(digit))
+  elif digit == b and not has_b:
+    has_b = True
+    pos_b = len(str(n)) - str(n).index(str(digit))
+  n //= 10
+if has_a and has_b:
+  if pos_a > pos_b:
+    print("Цифра a расположена правее цифры b")
+  else:
+    print("Цифра b расположена правее цифры a")
+else:
+  print("В числе нет цифр a и/или b")

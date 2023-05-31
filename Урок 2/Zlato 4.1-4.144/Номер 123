@@ -1,0 +1,7 @@
+score = int(input())
+if score == 3:
+  print("Выигрыш")
+elif score == 0:
+  print("Проигрыш")
+else:
+  print("Ничья")

@@ -1,0 +1,7 @@
+rainfall = []
+for i in range(31):
+  rainfall.append(float(input(f"Введите количество осадков за {i+1}-й день марта: ")))
+if rainfall.count(0) >= 10:
+  print("Осадков не было 10 дней в месяц")
+else:
+  print("Осадки были во все дни месяца")

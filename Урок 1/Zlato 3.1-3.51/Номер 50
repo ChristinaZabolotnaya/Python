@@ -1,0 +1,19 @@
+h = int(input("Введите часы - "))
+m = int(input("Введите минуты - "))
+# Совпадут
+if h == 12:
+    h = 0
+n_h = h * 30 + m / 2
+n_m = m * 6
+diff = abs(n_h - n_m)
+if diff > 180:
+    diff = 360 - diff
+tm = diff / 0.5
+print("Время до совпадения стрелок - ", int(tm))
+# Расположение перпендикулярно 
+n_diff = abs(n_h - n_m)
+if n_diff == 0 or n_diff == 180:
+    tp = 0
+else:
+    tp = (abs(n_diff - 90) / 0.5) % 720
+print("Время до расположения стрелок перпендикулярно друг другу -", int(tp))

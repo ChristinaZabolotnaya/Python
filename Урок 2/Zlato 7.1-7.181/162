@@ -1,0 +1,12 @@
+n = int(input("Введите количество дней: "))
+precipitations = []
+for i in range(n):
+  precipitation = int(input(f"Введите количество осадков за {i+1} день: "))
+  precipitations.append(precipitation)
+max_precipitation = max(precipitations)
+last_max_index = None
+for i in range(n-1, -1, -1):
+  if precipitations[i] == max_precipitation:
+    last_max_index = i
+    break
+print(f"Самое большое количество осадков выпало {last_max_index+1} числа")

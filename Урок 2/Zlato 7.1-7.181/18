@@ -1,0 +1,10 @@
+n = int(input("Введите натуральное число: "))
+b = int(input("Введите целое число: "))
+numbers = []
+for i in range(n):
+  number = int(input("Введите число: "))
+  numbers.append(number)
+if sum(numbers) % b == 0:
+  print("Сумма чисел кратна", b)
+else:
+  print("Сумма чисел не кратна", b)

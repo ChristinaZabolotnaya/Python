@@ -1,0 +1,6 @@
+n = 25
+distances = list(map(float, input("Введите длины участков пути: ").split()))
+times = list(map(float, input("Введите время, затраченное на каждый участок: ").split()))
+speeds = [distances[i]/times[i] for i in range(n)]
+max_speed_index = speeds.index(max(speeds))
+print(f"Максимальная средняя скорость была у автомобиля под номером {max_speed_index+1}")

@@ -1,0 +1,32 @@
+# 1
+def prime_factors_1(num):
+    factors = []
+    i = 2
+    while i * i <= num:
+        if num % i:
+            i += 1
+        else:
+            num //= i
+            if i not in factors:
+                factors.append(i)
+    if num > 1 and num not in factors:
+        factors.append(num)
+    return factors
+
+# 2
+def prime_factors_2(num):
+    factors = []
+    i = 2
+    while i * i <= num:
+        if num % i:
+            i += 1
+        else:
+            factors.append(i)
+            num //= i
+    if num > 1:
+        factors.append(num)
+    return factors
+
+n = int(input("Введите число: "))
+print("Простые множители (вариант 1):", prime_factors_1(n))
+print("Простые множители (вариант 2):", prime_factors_2(n))

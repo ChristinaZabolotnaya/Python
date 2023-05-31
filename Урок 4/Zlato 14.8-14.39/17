@@ -1,0 +1,16 @@
+def area(a, b, c):
+    p = (a + b + c) / 2
+    s = (p*(p-a)*(p-b)*(p-c)) ** 0.5
+    return s
+a = float(input("Введите значение стороны a: "))
+b = float(input("Введите значение стороны b: "))
+c = float(input("Введите значение стороны c: "))
+d = float(input("Введите значение стороны d: "))
+e = float(input("Введите значение стороны e: "))
+s1 = area(a, b, c)
+s2 = area(c, d, e)
+s3 = area(a, c, e)
+s4 = area(b, c, d)
+s5 = area(a, b, d)
+total_area = s1 + s2 + s3 + s4 + s5
+print("Площадь пятиугольника:", total_area)

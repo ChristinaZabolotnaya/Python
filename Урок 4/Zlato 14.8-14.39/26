@@ -1,0 +1,19 @@
+def sum_of_digits(num):
+    s = 0
+    while num > 0:
+        s += num % 10
+        num //= 10
+    return s
+
+num1 = int(input("Введите первое натуральное число: "))
+num2 = int(input("Введите второе натуральное число: "))
+
+sum1 = sum_of_digits(num1)
+sum2 = sum_of_digits(num2)
+
+if sum1 > sum2:
+    print("Сумма цифр первого числа больше")
+elif sum2 > sum1:
+    print("Сумма цифр второго числа больше")
+else:
+    print("Суммы цифр равны")

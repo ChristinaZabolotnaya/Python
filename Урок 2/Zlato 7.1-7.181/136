@@ -1,0 +1,8 @@
+best_result = float(input("Введите результат первого спортсмена: "))
+while True:
+  result = float(input("Введите результат очередного спортсмена (для завершения введите 0): "))
+  if result == 0:
+    break
+  if result < best_result:
+    best_result = result
+print(f"Лучший результат: {best_result}")

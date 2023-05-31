@@ -1,0 +1,3 @@
+temperatures = list(map(int, input("Введите температуры за месяц через пробел: ").split()))
+min_temp = min(temperatures)
+print(f"Количество дней с самой низкой температурой: {temperatures.count(min_temp)}")

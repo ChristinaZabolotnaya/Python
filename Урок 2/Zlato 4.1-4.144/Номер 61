@@ -1,0 +1,13 @@
+a = float(input("Введите значение а - "))
+b = float(input("Введите значение b - "))
+c = float(input("Введите значение c - "))
+discriminant = b**2 - 4*a*c
+if discriminant > 0:
+  x1 = (-b + discriminant**(1/2))/(2*a)
+  x2 = (-b - discriminant**(1/2))/(2*a)
+  print(f"Уравнение имеет два действительных корня: {x1} и {x2}.")
+elif discriminant == 0:
+  x = -b/(2*a)
+  print(f"Уравнение имеет один действительный корень: {x}.")
+else:
+  print("У уравнения нет действительных корней.")

@@ -1,0 +1,4 @@
+summa = 0
+for i in range(1, 13):
+  summa += (2*i-1)**2
+print("Сумма квадратов от 1 до 12:", summa)

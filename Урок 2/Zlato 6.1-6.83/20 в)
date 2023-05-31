@@ -1,0 +1,6 @@
+num = int(input("Введите натуральное число: "))
+prod = 1
+while num > 0:
+  prod *= num % 10
+  num //= 10
+print("Произведение цифр:", prod)

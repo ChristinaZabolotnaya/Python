@@ -1,0 +1,21 @@
+m = int(input())
+k = int(input())
+if m == 1:
+  suit = "пик"
+elif m == 2:
+  suit = "треф"
+elif m == 3:
+  suit = "бубен"
+else:
+  suit = "червей"
+if k == 11:
+  rank = "валет"
+elif k == 12:
+  rank = "дама"
+elif k == 13:
+  rank = "король"
+elif k == 14:
+  rank = "туз"
+else:
+  rank = str(k)
+print(rank.capitalize() + " " + suit)

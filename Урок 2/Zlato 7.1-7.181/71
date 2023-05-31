@@ -1,0 +1,8 @@
+grades = []
+n = int(input("Введите количество студентов: "))
+for i in range(n):
+  grade1 = int(input(f"Введите оценку студента {i+1} за первый экзамен: "))
+  grade2 = int(input(f"Введите оценку студента {i+1} за второй экзамен: "))
+  grades.append((grade1, grade2))
+count_twos = sum(1 for grade in grades if 2 in grade)
+print("Количество студентов, получивших на экзамене двойку:", count_twos)

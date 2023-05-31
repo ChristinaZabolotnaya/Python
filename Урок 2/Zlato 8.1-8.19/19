@@ -1,0 +1,16 @@
+# а)
+sum_fib = 0
+a, b = 1, 1
+while b <= 1000:
+    if b % 2 == 0:
+        sum_fib += b
+    a, b = b, a+b
+print("Сумма всех четных чисел Фибоначчи, не превосходящих 1000:", sum_fib)
+# б)
+p = float(input("Введите число p: "))
+a, b = 1, 1
+while True:
+    if b > p:
+        print("Первое число Фибоначчи, большее p:", b)
+        break
+    a, b = b, a+b

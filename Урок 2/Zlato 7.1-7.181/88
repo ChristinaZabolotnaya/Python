@@ -1,0 +1,10 @@
+p = int(input("Введите количество чисел: "))
+a = []
+for i in range(p):
+  a.append(int(input(f"Введите число a{i+1}: ")))
+count_negative = sum(1 for num in a if num < 0)
+x = int(input("Введите число x: "))
+if count_negative > x:
+  print("Количество отрицательных чисел больше заданного числа x")
+else:
+  print("Количество отрицательных чисел не превышает заданное число x")

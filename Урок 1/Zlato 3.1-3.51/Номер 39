@@ -1,0 +1,6 @@
+n = int(input("Введите число n = "))
+last = n % 10
+second = (n // 10) % 10
+first = n // 100
+x = int(str(first) + str(last) + str(second))
+print("Число x равно", x)

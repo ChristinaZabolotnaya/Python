@@ -1,0 +1,16 @@
+import random
+
+words_file = input("Введите имя файла со списком слов: ")
+try:
+    with open(words_file, 'r') as f:
+        words = [word.strip().capitalize() for word in f if len(word.strip()) >= 3]
+    if len(words) < 2:
+        print("Недостаточно слов в файле")
+    else:
+        password = ''
+        while len(password) < 8 or len(password) > 10:
+            word1, word2 = random.sample(words, 2)
+            password = word1 + word2
+        print("Сгенерированный пароль:", password)
+except FileNotFoundError:
+    print("Файл не найден")

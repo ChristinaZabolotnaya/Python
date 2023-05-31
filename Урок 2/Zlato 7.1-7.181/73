@@ -1,0 +1,9 @@
+m = int(input("Введите количество чисел: "))
+nums = []
+for i in range(m):
+  num = int(input(f"Введите число {i+1}: "))
+  nums.append(num)
+count_multiples_of_three = sum(1 for num in nums if num % 3 == 0)
+count_multiples_of_seven = sum(1 for num in nums if num % 7 == 0)
+print("Количество чисел, кратных трем:", count_multiples_of_three)
+print("Количество чисел, кратных семи:", count_multiples_of_seven)

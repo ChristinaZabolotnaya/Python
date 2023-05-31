@@ -1,0 +1,7 @@
+n = int(input())
+a = int(input())
+sum = (2 * a + n - 1) * n // 2
+if sum % 2 == 0:
+  print("YES")
+else:
+  print("NO")

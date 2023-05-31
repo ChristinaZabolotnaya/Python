@@ -1,0 +1,13 @@
+def sum_of_digits(num):
+    s = 0
+    while num > 0:
+        s += num % 10
+        num //= 10
+    return s
+
+count = 0
+for num in range(100000, 1000000):
+    if sum_of_digits(num // 1000) == sum_of_digits(num % 1000):
+        count += 1
+
+print("Количество счастливых чисел:", count)

@@ -1,0 +1,11 @@
+sequence = []
+while True:
+  num = int(input("Введите число (для завершения введите -1): "))
+  if num == -1:
+    break
+  sequence.append(num)
+if any(x % 7 == 0 for x in sequence):
+  index = sequence.index(next(x for x in sequence if x % 7 == 0)) + 1
+  print(f"Первое число, кратное семи, имеет порядковый номер: {index}")
+else:
+  print("Чисел, кратных семи, в последовательности нет.")

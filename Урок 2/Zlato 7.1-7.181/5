@@ -1,0 +1,7 @@
+salaries = []
+n = int(input("Введите количество сотрудников: "))
+for i in range(n):
+  salary = float(input("Введите зарплату сотрудника: "))
+  salaries.append(salary)
+total_salary = sum(salaries)
+print("Общая сумма выплаченных денег равна", total_salary)

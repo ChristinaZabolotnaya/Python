@@ -1,0 +1,8 @@
+x = []
+for i in range(15):
+  x.append(float(input(f"Введите число x{i+1}: ")))
+count = sum(1 for num in x if num <= 33.2)
+if count % 4 == 0:
+  print("Количество чисел, не больших 33.2, кратно четырем")
+else:
+  print("Количество чисел, не больших 33.2, не кратно четырем")

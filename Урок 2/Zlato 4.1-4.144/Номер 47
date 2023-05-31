@@ -1,0 +1,11 @@
+a = float(input("Введите первое число - "))
+b = float(input("Введите второе число - "))
+c = float(input("Введите третье число - "))
+if a < b < c:
+  print("a < b < c is True")
+else:
+  print("a < b < c is False")
+if b > a > c:
+  print("b > a > c is True")
+else:
+  print("b > a > c is False")

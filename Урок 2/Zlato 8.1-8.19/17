@@ -1,0 +1,7 @@
+a, b = 1, 1
+while True:
+    c = a + b
+    if abs((c/b) - (b/a)) <= 0.001:
+        print(c/b)
+        break
+    a, b = b, c

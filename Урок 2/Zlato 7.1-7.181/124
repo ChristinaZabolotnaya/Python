@@ -1,0 +1,7 @@
+scores = []
+for i in range(20):
+  score = int(input(f"Введите количество очков команды {i+1}: "))
+  scores.append(score)
+n = int(input("Введите количество очков искомой команды: "))
+rank = scores.index(n) + 1
+print(f"Команда, набравшая {n} очков, заняла {rank}-е место.")

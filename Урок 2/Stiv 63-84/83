@@ -1,0 +1,17 @@
+import random
+
+max_num = 0
+max_changes = 0
+prev_num = None
+for i in range(100):
+    num = random.randint(1, 100)
+    if num > max_num:
+        max_num = num
+        max_changes += 1
+        print(f"{num} <== Обновление")
+    else:
+        print(num)
+    prev_num = num
+
+print(f"Максимальное значение в ряду: {max_num}")
+print(f"Количество смен максимального значения: {max_changes}")

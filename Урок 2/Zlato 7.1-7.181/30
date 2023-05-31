@@ -1,0 +1,6 @@
+masses = []
+for i in range(10):
+  mass = float(input("Введите массу предмета: "))
+  masses.append(mass)
+average = sum(masses) / len(masses)
+print("Средняя масса предметов:", average)

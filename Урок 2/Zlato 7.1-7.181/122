@@ -1,0 +1,10 @@
+t = int(input("Введите натуральное число t: "))
+sequence = []
+for i in range(t):
+  sequence.append(int(input(f"Введите число x{i+1}: ")))
+last_index = None
+for i in range(t-1, -1, -1):
+  if sequence[i] % 100 == 12:
+    last_index = i+1
+    break
+print(f"Номер последнего числа, оканчивающегося на 12: {last_index}")

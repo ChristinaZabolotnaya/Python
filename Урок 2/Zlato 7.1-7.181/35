@@ -1,0 +1,12 @@
+physics_grades_class1 = []
+physics_grades_class2 = []
+for i in range(20):
+  grade = int(input("Введите оценку по физике ученика класса 1: "))
+  physics_grades_class1.append(grade)
+for i in range(20):
+  grade = int(input("Введите оценку по физике ученика класса 2: "))
+  physics_grades_class2.append(grade)
+average_physics_grades_class1 = sum(physics_grades_class1) / len(physics_grades_class1)
+average_physics_grades_class2 = sum(physics_grades_class2) / len(physics_grades_class2)
+print("Средняя оценка по физике в классе 1:", average_physics_grades_class1)
+print("Средняя оценка по физике в классе 2:", average_physics_grades_class2)

@@ -1,0 +1,11 @@
+def decimal_to_binary(n):
+    if n == 0:
+        return ''
+    else:
+        return decimal_to_binary(n // 2) + str(n % 2)
+
+num = int(input("Введите число: "))
+if num < 0:
+    print("Ошибка: введено отрицательное число")
+else:
+    print("Двоичное представление числа:", decimal_to_binary(num))

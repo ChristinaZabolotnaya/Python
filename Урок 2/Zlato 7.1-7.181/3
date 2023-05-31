@@ -1,0 +1,6 @@
+sides = []
+for i in range(12):
+  side = float(input("Введите длину стороны: "))
+  sides.append(side)
+perimeter = sum(sides)
+print("Периметр 12-угольника равен", perimeter)

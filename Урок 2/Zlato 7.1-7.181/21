@@ -1,0 +1,11 @@
+athlete1 = []
+athlete2 = []
+for i in range(10):
+  result1 = int(input("Введите результат первого спортсмена: "))
+  athlete1.append(result1)
+  result2 = int(input("Введите результат второго спортсмена: "))
+  athlete2.append(result2)
+if sum(athlete1) > sum(athlete2):
+  print("Первый спортсмен показал лучший результат")
+else:
+  print("Второй спортсмен показал лучший результат")

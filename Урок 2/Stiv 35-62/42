@@ -1,0 +1,8 @@
+notes = {'C': 261.63, 'D': 293.66, 'E': 329.63, 'F': 349.23, 'G': 392.00, 'A': 440.00, 'B': 493.88}
+
+note = input("Введите обозначение ноты (от C до B): ")
+octave = int(input("Введите номер октавы (от 0 до 8): "))
+
+frequency = notes[note] * (2 ** octave)
+
+print(f"Частота ноты {note}{octave} равна {frequency:.2f} Гц")

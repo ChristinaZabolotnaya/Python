@@ -1,0 +1,34 @@
+import random
+
+def generatePassword():
+    length = random.randint(7, 10)
+    password = ""
+    for i in range(length):
+        password += chr(random.randint(33, 126))
+    return password
+    
+    def checkPassword(password):
+    if len(password) < 8:
+        return False
+    upper = False
+    lower = False
+    digit = False
+    for char in password:
+        if char.isupper():
+            upper = True
+        elif char.islower():
+            lower = True
+        elif char.isdigit():
+            digit = True
+    if upper and lower and digit:
+        return True
+    else:
+        return False
+attempts = 0
+while True:
+    attempts += 1
+    password = generatePassword()
+    if checkPassword(password):
+        print("Generated password:", password)
+        print("Attempts:", attempts)
+        break

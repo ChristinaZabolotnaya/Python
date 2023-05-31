@@ -1,0 +1,26 @@
+import csv
+
+def can_make_sequence(start, elements, used):
+    if len(used) == len(elements):
+        return [start]
+    for element in elements:
+        if element not in used and element[0] == start[-1]:
+            result = can_make_sequence(element, elements, used + [element])
+            if result is not None:
+                return [start] + result
+    return None
+
+with open('elements.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    elements = [row[1] for row in reader]
+
+start = input("Введите химический элемент: ")
+if start not in elements:
+    print("Ошибка: такого элемента не существует.")
+else:
+    result = can_make_sequence(start, elements, [start])
+    if result is not None:
+        print("Максимально возможная последовательность элементов:")
+        print(", ".join(result))
+    else:
+        print("Невозможно составить последовательность из заданного элемента.")

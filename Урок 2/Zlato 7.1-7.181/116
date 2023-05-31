@@ -1,0 +1,19 @@
+car_prices = []
+motorcycle_prices = []
+while True:
+  price = float(input("Введите стоимость машины или мотоцикла (-1 для завершения ввода): "))
+  if price == -1:
+    break
+  if price > 5000:
+    car_prices.append(price)
+  else:
+    motorcycle_prices.append(price)
+if len(car_prices) > 0 and len(motorcycle_prices) > 0:
+  mean_car = sum(car_prices) / len(car_prices)
+  mean_motorcycle = sum(motorcycle_prices) / len(motorcycle_prices)
+  if mean_car > mean_motorcycle * 3:
+    print("Средняя стоимость автомобилей превышает среднюю стоимость мотоциклов более чем в 3 раза.")
+  else:
+    print("Средняя стоимость автомобилей не превышает среднюю стоимость мотоциклов более чем в 3 раза.")
+else:
+  print("Недостаточно данных для сравнения средних стоимостей автомобилей и мотоциклов.")

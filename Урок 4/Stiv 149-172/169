@@ -1,0 +1,19 @@
+import sys
+
+if len(sys.argv) < 4:
+    print("Необходимо указать имена файлов: исходный файл, файл со служебными словами и новый файл")
+else:
+    source_file = sys.argv[1]
+    stopwords_file = sys.argv[2]
+    new_file = sys.argv[3]
+    try:
+        with open(source_file, 'r') as f:
+            source_text = f.read()
+        with open(stopwords_file, 'r') as f:
+            stopwords = [word.strip() for word in f]
+        for word in stopwords:
+            source_text = source_text.replace(word, '*'*len(word))
+        with open(new_file, 'w') as f:
+            f.write(source_text)
+    except FileNotFoundError:
+        print("Ошибка: один из файлов не найден")

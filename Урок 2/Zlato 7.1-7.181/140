@@ -1,0 +1,7 @@
+areas = []
+for i in range(10):
+  area = float(input(f"Введите площадь круга {i+1}: "))
+  areas.append(area)
+min_area = min(areas)
+radius = (min_area / 3.14) ** 0.5
+print(f"Радиус самого маленького круга: {radius}")

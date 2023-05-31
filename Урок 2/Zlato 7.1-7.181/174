@@ -1,0 +1,6 @@
+points = list(map(int, input("Введите количество очков для каждой из 12 команд через пробел: ").split()))
+sorted_points = sorted(points, reverse=True)
+first_place_points = sorted_points[0]
+second_place_points = sorted_points[1]
+third_place_points = sorted_points[2]
+print(f"Первое место заняла команда с {first_place_points} очками, второе место - с {second_place_points} очками, третье место - с {third_place_points} очками")

@@ -1,0 +1,5 @@
+from math import sqrt
+x = ((5+sqrt(5))/(sqrt(7)+7)) + ((12+sqrt(12))/(sqrt(8)+8)) + ((31+sqrt(31))/(sqrt(2)+2))
+print("Значение x:", x)
+x = ((13+sqrt(7))/(sqrt(13)+7)) + ((15+sqrt(12))/(sqrt(15)+12)) + ((32+sqrt(21))/(sqrt(32)+21))
+print("Значение x:", x)

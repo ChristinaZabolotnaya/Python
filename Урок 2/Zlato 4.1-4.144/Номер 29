@@ -1,0 +1,10 @@
+num = int(input("Введите число num - "))
+sum_digits = (num // 10) + (num % 10)
+if sum_digits % 3 == 0:
+  print("Сумма цифр делится на три.")
+else:
+  print("Сумма цифр не делится на три.")
+if sum_digits % num == 0:
+  print("Сумма цифр делится на число.")
+else:
+  print("Сумма цифр неделится на число.")

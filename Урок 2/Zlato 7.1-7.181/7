@@ -1,0 +1,7 @@
+resistances = []
+n = int(input("Введите количество элементов цепи: "))
+for i in range(n):
+  resistance = float(input("Введите сопротивление элемента: "))
+  resistances.append(resistance)
+total_resistance = 1/sum(1/r for r in resistances)
+print("Общее сопротивление цепи равно", total_resistance)

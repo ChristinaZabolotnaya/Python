@@ -1,0 +1,11 @@
+sequence = []
+while True:
+  num = int(input("Введите число (для завершения введите 100): "))
+  if num == 100:
+    break
+  sequence.append(num)
+if 666 in sequence:
+  index = sequence.index(666) + 1
+  print(f"Первое число 666 имеет порядковый номер: {index}")
+else:
+  print("Числа 666 в последовательности нет.")

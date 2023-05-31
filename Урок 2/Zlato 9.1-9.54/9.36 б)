@@ -1,0 +1,10 @@
+s = int(input("Введите площадь: "))
+solutions = set()
+for i in range(1, int(s**0.5)+1):
+    if s % i == 0:
+        j = s // i
+        if i <= j:
+            solutions.add((i, j))
+            solutions.add((j, i))
+for solution in solutions:
+    print(solution[0], solution[1])

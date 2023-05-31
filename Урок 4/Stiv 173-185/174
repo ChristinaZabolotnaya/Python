@@ -1,0 +1,11 @@
+def euclid(a, b):
+    if b == 0:
+        return a
+    else:
+        c = a % b
+        return euclid(b, c)
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+print("Наибольший общий делитель:", euclid(a, b))

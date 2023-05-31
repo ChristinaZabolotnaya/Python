@@ -1,0 +1,34 @@
+g = int(input())
+m = int(input())
+n = int(input())
+days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]
+if g % 4 == 0 and (g % 100 != 0 or g % 400 == 0):
+  days_in_month[1] = 29
+if n == 1:
+  if m == 1:
+    prev_year = g - 1
+    prev_month = 12
+    prev_day = days_in_month[prev_month-1]
+  else:
+    prev_year = g
+    prev_month = m - 1
+    prev_day = days_in_month[prev_month-1]
+else:
+  prev_year = g
+  prev_month = m
+  prev_day = n - 1
+if n == days_in_month[m-1]:
+  if m == 12:
+    next_year = g + 1
+    next_month = 1
+    next_day = 1
+  else:
+    next_year = g
+    next_month = m + 1
+    next_day = 1
+else:
+  next_year = g
+  next_month = m
+  next_day = n + 1
+print("Предыдущий день:", prev_day, prev_month, prev_year)
+print("Следующий день:", next_day, next_month, next_year)

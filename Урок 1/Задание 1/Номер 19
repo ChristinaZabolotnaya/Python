@@ -1,0 +1,9 @@
+a = float(input('а ='))
+b = float(input('b ='))
+from math import sqrt, sin
+chisx = 2 / (a ** 2 + 25) + b 
+znamx = sqrt(b) + (a + b) / 2 
+chisy = abs(a) + 2 * sin(b) 
+znamy = 5.5 * a 
+print('x =', chisx / znamx)
+print('y =', chisy / znamy)

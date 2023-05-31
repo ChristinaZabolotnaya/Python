@@ -1,0 +1,16 @@
+v = int(input("Введите объем: "))
+solutions = set()
+for i in range(1, int(v**(1/3))+1):
+    if v % i == 0:
+        for j in range(i, int((v/i)**0.5)+1):
+            if v % (i*j) == 0:
+                k = v // (i*j)
+                if i <= j and j <= k:
+                    solutions.add((i, j, k))
+                    solutions.add((i, k, j))
+                    solutions.add((j, i, k))
+                    solutions.add((j, k, i))
+                    solutions.add((k, i, j))
+                    solutions.add((k, j, i))
+for solution in solutions:
+    print(solution[0], solution[1], solution[2])

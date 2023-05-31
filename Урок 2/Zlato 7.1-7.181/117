@@ -1,0 +1,15 @@
+heights = []
+for i in range(25):
+  height = int(input(f"Введите рост ученика {i+1}: "))
+  heights.append(height)
+male_heights = [x for x in heights if x < 0]
+female_heights = [x for x in heights if x >= 0]
+if len(male_heights) > 0 and len(female_heights) > 0:
+  mean_male = sum(male_heights) / len(male_heights)
+  mean_female = sum(female_heights) / len(female_heights)
+  if mean_male > mean_female + 10:
+    print("Средний рост мальчиков превышает средний рост девочек более чем на 10 см.")
+  else:
+    print("Средний рост мальчиков не превышает средний рост девочек более чем на 10 см.")
+else:
+  print("Недостаточно данных для сравнения средних ростов мальчиков и девочек.")

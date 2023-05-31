@@ -1,0 +1,7 @@
+speed_kmh = int(input("Введите число kmh - "))
+speed_ms = int(input("Введите число ms -  "))
+speed_kmh_to_ms = speed_kmh / 3.6 
+if speed_kmh_to_ms > speed_ms:
+  print("TСкорость в километрах в час больше")
+else:
+  print("Скорость в метрах в секунду больше")

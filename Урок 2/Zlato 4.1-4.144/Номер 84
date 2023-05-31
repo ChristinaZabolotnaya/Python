@@ -1,0 +1,28 @@
+n = int(input())
+rub = n // 100
+kop = n % 100
+if rub == 0:
+  if kop == 1:
+    print(kop, "копейка")
+  elif kop in [2, 3, 4]:
+    print(kop, "копейки")
+  else:
+    print(kop, "копеек")
+elif rub == 1:
+  if kop == 0:
+    print(rub, "рубль ровно")
+  elif kop == 1:
+    print(rub, "рубль", kop, "копейка")
+  elif kop in [2, 3, 4]:
+    print(rub, "рубль", kop, "копейки")
+  else:
+    print(rub, "рубль", kop, "копеек")
+else:
+  if kop == 0:
+    print(rub, "рублей ровно")
+  elif kop == 1:
+    print(rub, "рублей", kop, "копейка")
+  elif kop in [2, 3, 4]:
+    print(rub, "рублей", kop, "копейки")
+  else:
+    print(rub, "рублей", kop, "копеек")

@@ -1,0 +1,12 @@
+january_rainfall = []
+march_rainfall = []
+for i in range(31):
+  rainfall = float(input("Введите количество осадков в январе: "))
+  january_rainfall.append(rainfall)
+for i in range(31):
+  rainfall = float(input("Введите количество осадков в марте: "))
+  march_rainfall.append(rainfall)
+average_january_rainfall = sum(january_rainfall) / len(january_rainfall)
+average_march_rainfall = sum(march_rainfall) / len(march_rainfall)
+print("Среднедневное количество осадков в январе:", average_january_rainfall)
+print("Среднедневное количество осадков в марте:", average_march_rainfall)

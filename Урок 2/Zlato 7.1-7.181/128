@@ -1,0 +1,9 @@
+sequence = []
+for i in range(12):
+  num = int(input(f"Введите число b{i+1}: "))
+  sequence.append(num)
+if any(str(x)[-1] == '7' for x in sequence):
+  index = sequence.index(next(x for x in sequence if str(x)[-1] == '7')) + 1
+  print(f"Первое число, оканчивающееся на 7, имеет порядковый номер: {index}")
+else:
+  print("Чисел, оканчивающихся на 7, в последовательности нет.")

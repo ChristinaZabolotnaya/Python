@@ -1,0 +1,31 @@
+n = int(input("Введите натуральное число: "))
+k = int(input("Введите число k: "))
+b = int(input("Введите число b: "))
+t = int(input("Введите число t: "))
+sum_digits = 0
+count_digits = 0
+prod_digits = 1
+for digit in str(n):
+  sum_digits += int(digit)
+  count_digits += 1
+  prod_digits *= int(digit)
+if sum_digits > k and n % 2 == 0:
+  print("Сумма цифр больше k и число четное")
+else:
+  print("Сумма цифр не больше k и/или число нечетное")
+if count_digits % 2 == 0 and n <= b:
+  print("Количество цифр четное и число не превышает b")
+else:
+  print("Количество цифр нечетное и/или число больше b")
+if str(n)[0] == str(t) and str(n)[-1] == str(t):
+  print("Число начинается и заканчивается цифрой t")
+else:
+  print("Число не начинается и/или не заканчивается цифрой t")
+if prod_digits < a and n % b == 0:
+  print("Произведение цифр меньше a и число делится на b")
+else:
+  print("Произведение цифр не меньше a и/или число не делится на b")
+if sum_digits > t and n % p == 0:
+  print("Сумма цифр больше t и число делится на p")
+else:
+  print("Сумма цифр не больше t и/или число не делится на p")

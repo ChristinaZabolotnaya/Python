@@ -1,0 +1,11 @@
+capacity = float(input("Введите грузоподъемность автомобиля: "))
+weights = []
+while True:
+  weight = float(input("Введите массу груза (0 - для окончания ввода): "))
+  if weight == 0:
+    break
+  weights.append(weight)
+if sum(weights) <= capacity:
+  print("Общая масса всех грузов не превышает грузоподъемность автомобиля")
+else:
+  print("Общая масса всех грузов превышает грузоподъемность автомобиля")

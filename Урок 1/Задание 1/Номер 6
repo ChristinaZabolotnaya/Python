@@ -1,0 +1,4 @@
+h = int(input())
+r = 6350
+from math import sqrt
+print('S =', sqrt((r + h)**2 - r ** 2))

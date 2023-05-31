@@ -1,0 +1,32 @@
+import string
+
+filename = input("Введите имя файла: ")
+letters = {}
+total_words = 0
+
+try:
+    with open(filename, 'r') as f:
+        for line in f:
+            line = line.translate(str.maketrans("", "", string.punctuation)).lower()
+            words = line.strip().split()
+            for word in words:
+                total_words += 1
+                for letter in word:
+                    if letter not in letters:
+                        letters[letter] = 1
+                    else:
+                        letters[letter] += 1
+
+    rarest_letter = min(letters, key=letters.get)
+
+    print("Статистика использования букв:")
+    for letter in string.ascii_lowercase:
+        if letter in letters:
+            percentage = round(letters[letter] / total_words * 100, 2)
+            print(f"{letter}: {percentage}%")
+        else:
+            print(f"{letter}: 0%")
+    print(f"Самая редкая буква: {rarest_letter}")
+
+except FileNotFoundError:
+    print("Файл не найден")

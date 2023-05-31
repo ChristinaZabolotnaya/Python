@@ -1,0 +1,18 @@
+frequency = float(input("Введите значение частоты в Гц: "))
+
+if frequency < 3e9:
+    category = "Радиоволны"
+elif frequency >= 3e9 and frequency < 3e12:
+    category = "Микроволны"
+elif frequency >= 3e12 and frequency < 4.3e14:
+    category = "Инфракрасное излучение"
+elif frequency >= 4.3e14 and frequency < 7.5e14:
+    category = "Видимое излучение"
+elif frequency >= 7.5e14 and frequency < 3e17:
+    category = "Ультрафиолетовое излучение"
+elif frequency >= 3e17 and frequency < 3e19:
+    category = "Рентгеновское излучение"
+else:
+    category = "Гамма-излучение"
+
+print(f"Частота {frequency} Гц соответствует категории {category}")

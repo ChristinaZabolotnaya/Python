@@ -1,0 +1,3 @@
+mpg = float(input("Введите показатель MPG: "))
+lphk = 235.215 / mpg
+print("Показатель L/100 km:", round(lphk, 2))

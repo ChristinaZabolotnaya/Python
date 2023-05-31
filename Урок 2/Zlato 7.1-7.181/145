@@ -1,0 +1,5 @@
+scores = list(map(int, input("Введите оценки судей через пробел: ").split()))
+scores.remove(max(scores))
+scores.remove(min(scores))
+average_score = sum(scores) / len(scores)
+print(f"Оценка спортсмена: {average_score}")

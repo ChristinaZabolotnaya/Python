@@ -1,0 +1,19 @@
+n = int(input("Введите натуральное число: "))
+has_2 = False
+has_5 = False
+while n > 0:
+  digit = n % 10
+  if digit == 2 and not has_2:
+    has_2 = True
+    pos_2 = len(str(n)) - str(n).index(str(digit))
+  elif digit == 5 and not has_5:
+    has_5 = True
+    pos_5 = len(str(n)) - str(n).index(str(digit))
+  n //= 10
+if has_2 and has_5:
+  if pos_2 < pos_5:
+    print("Цифра 2 расположена левее цифры 5")
+  else:
+    print("Цифра 5 расположена левее цифры 2")
+else:
+  print("В числе нет цифр 2 и/или 5")

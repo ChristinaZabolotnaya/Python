@@ -1,0 +1,17 @@
+sequence = []
+for i in range(15):
+  num = float(input(f"Введите число у{i+1}: "))
+  sequence.append(num)
+p = float(input("Введите число п: "))
+while p in sequence:
+  p = float(input("Число п должно быть не равно ни одному из чисел последовательности. Введите другое число: "))
+sum_less_p = sum(filter(lambda x: x < p, sequence))
+print(f"Сумма чисел последовательности, меньших {p}: {sum_less_p}")
+for i in range(len(sequence)-1):
+  if sequence[i] < p and sequence[i+1] > p:
+    print(f"Элементы между которыми находится {p}:")
+    print(f"Порядковый номер первого элемента: {i+1}")
+    print(f"Значение первого элемента: {sequence[i]}")
+    print(f"Порядковый номер второго элемента: {i+2}")
+    print(f"Значение второго элемента: {sequence[i+1]}")
+    break

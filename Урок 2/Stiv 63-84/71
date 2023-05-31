@@ -1,0 +1,9 @@
+pi = 3
+sign = 1
+denominator = 2
+
+for i in range(15):
+    pi += sign * 4 / (denominator * (denominator + 1) * (denominator + 2))
+    sign *= -1
+    denominator += 2
+    print(f"Приближение {i+1}: {pi:.10f}")

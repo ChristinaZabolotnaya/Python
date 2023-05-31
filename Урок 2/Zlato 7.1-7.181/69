@@ -1,0 +1,10 @@
+grades = []
+n = int(input("Введите количество учеников: "))
+for i in range(n):
+  grade = int(input(f"Введите оценку ученика {i+1}: "))
+  grades.append(grade)
+count_fives = grades.count(5)
+if count_fives == n:
+  print("Все ученики получили оценку 5")
+else:
+  print("Количество учеников, получивших оценку 5:", count_fives)

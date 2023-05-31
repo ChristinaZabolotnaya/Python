@@ -1,0 +1,13 @@
+n = int(input("Введите n: "))
+fib1 = 1
+fib2 = 1
+sum_fib = 2
+for i in range(3, n+1):
+  fib_sum = fib1 + fib2
+  fib1 = fib2
+  fib2 = fib_sum
+  sum_fib += fib_sum
+if sum_fib % 2 == 0:
+  print("Сумма первых", n, "членов последовательности Фибоначчи - четное число")
+else:
+  print("Сумма первых", n, "членов последовательности Фибоначчи - нечетное число")

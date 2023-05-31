@@ -1,0 +1,7 @@
+grades = []
+for i in range(28):
+  grades.append(int(input(f"Введите оценку ученика {i+1}: ")))
+if 2 in grades:
+  print("Среди оценок есть двойки")
+else:
+  print("Среди оценок нет двоек")

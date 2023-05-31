@@ -1,0 +1,11 @@
+num = int(input("Введите трехзначное число - "))
+digit1 = num // 100
+digit2 = num // 10 % 10
+digit3 = num % 10
+if digit1 == digit2 == digit3:
+  print("Все цифры одинаковы.")
+else:
+  if digit1 == digit2 or digit1 == digit3 or digit2 == digit3:
+    print("Есть одинаковые цифры.")
+  else:
+    print("Нет одинаковых цифр.")

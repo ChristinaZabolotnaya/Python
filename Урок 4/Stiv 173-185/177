@@ -1,0 +1,32 @@
+def roman_to_decimal(s):
+    if s == '':
+        return 0
+    elif s.startswith('M'):
+        return 1000 + roman_to_decimal(s[1:])
+    elif s.startswith('CM'):
+        return 900 + roman_to_decimal(s[2:])
+    elif s.startswith('D'):
+        return 500 + roman_to_decimal(s[1:])
+    elif s.startswith('CD'):
+        return 400 + roman_to_decimal(s[2:])
+    elif s.startswith('C'):
+        return 100 + roman_to_decimal(s[1:])
+    elif s.startswith('XC'):
+        return 90 + roman_to_decimal(s[2:])
+    elif s.startswith('L'):
+        return 50 + roman_to_decimal(s[1:])
+    elif s.startswith('XL'):
+        return 40 + roman_to_decimal(s[2:])
+    elif s.startswith('X'):
+        return 10 + roman_to_decimal(s[1:])
+    elif s.startswith('IX'):
+        return 9 + roman_to_decimal(s[2:])
+    elif s.startswith('V'):
+        return 5 + roman_to_decimal(s[1:])
+    elif s.startswith('IV'):
+        return 4 + roman_to_decimal(s[2:])
+    elif s.startswith('I'):
+        return 1 + roman_to_decimal(s[1:])
+
+num = input("Введите число, записанное римскими цифрами: ")
+print("Десятичное представление числа:", roman_to_decimal(num))

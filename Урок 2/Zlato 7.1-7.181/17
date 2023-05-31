@@ -1,0 +1,8 @@
+numbers = []
+for i in range(9):
+  number = int(input("Введите число: "))
+  numbers.append(number)
+if sum(numbers) % 2 == 0:
+  print("Сумма чисел четная")
+else:
+  print("Сумма чисел нечетная")

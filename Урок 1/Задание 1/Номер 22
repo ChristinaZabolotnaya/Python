@@ -1,0 +1,5 @@
+a = int(input())
+b = int(input())
+from math import sqrt
+print('Srar', (abs(a) + abs(b)) / 2)
+print('Srg', sqrt(abs(a) * abs(b)))

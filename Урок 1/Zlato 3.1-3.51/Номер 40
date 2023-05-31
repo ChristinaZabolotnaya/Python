@@ -1,0 +1,10 @@
+x = 0
+for i in range(100, 1000):
+    last = i % 10
+    second = (i // 10) % 10
+    first = i // 100
+    new_num = int(str(second) + str(first))
+    if int(str(last) + str(new_num) + str(first)) == 654:
+        x = i
+        break
+print("Число x равно =", x)

@@ -1,0 +1,4 @@
+sum_odd = 0
+for i in range(1, 50, 2):
+  sum_odd += i
+print(sum_odd)

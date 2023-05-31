@@ -1,0 +1,7 @@
+n = int(input())
+if n % 10 == 1 and n != 11:
+  print("мне", n, "год")
+elif n % 10 in [2, 3, 4] and n not in [12, 13, 14]:
+  print("мне", n, "года")
+else:
+  print("мне", n, "лет")

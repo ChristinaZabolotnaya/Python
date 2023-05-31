@@ -1,0 +1,22 @@
+import math
+a = -2
+b = 6
+n = 1000
+h = (b-a)/n
+summa = 0
+for i in range(n):
+  x1 = a + i*h
+  x2 = a + (i+1)*h
+  y1 = 0.4*(x1+2)**2 + 1
+  y2 = 0.4*(x2+2)**2 + 1
+  if y1 <= 2 and y2 <= 2:
+    summa += (2-y1)/2*h
+  elif y1 <= 2 and 2 < y2 <= 4:
+    summa += (2-y1)/2*h + (y2-2)*h
+  elif 2 < y1 <= 4 and y2 <= 4:
+    summa += (y2-y1)*h
+  elif y1 <= 2 and y2 > 4:
+    summa += (2-y1)/2*h + (4-2)*h + (y2-4)*h
+  elif 2 < y1 <= 4 and y2 > 4:
+    summa += (4-y1)*h + (y2-4)*h
+print("Приближенная площадь фигуры:", summa)

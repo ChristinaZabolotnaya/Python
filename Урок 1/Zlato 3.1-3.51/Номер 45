@@ -1,0 +1,11 @@
+k = int(input("Введите число k - "))
+num = ""
+for i in range(10, 100):
+    num += str(i)
+pair_num = (k-1) // 2 + 1
+pair = num[pair_num*2-2:pair_num*2]
+digit = num[k-1]
+print("а) Номер пары цифр - ", pair_num)
+print("б) Двузначное число - ", pair)
+print("в) Четная цифра - ", num[2*(k//2)-1])
+print("   Нечетная цифра - ", num[2*(k//2)])

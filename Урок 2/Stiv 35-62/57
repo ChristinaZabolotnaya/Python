@@ -1,0 +1,19 @@
+minutes = int(input("Введите количество израсходованных минут: "))
+messages = int(input("Введите количество израсходованных сообщений: "))
+
+base_price = 15.00
+additional_minutes_price = (minutes - 50) * 0.25 if minutes > 50 else 0
+additional_messages_price = (messages - 50) * 0.15 if messages > 50 else 0
+emergency_tax = 0.44
+total_price = base_price + additional_minutes_price + additional_messages_price + emergency_tax
+tax_rate = 0.05
+tax_amount = total_price * tax_rate
+
+print(f"Базовая сумма: {base_price:.2f} руб.")
+if additional_minutes_price > 0:
+    print(f"Сумма за дополнительные минуты: {additional_minutes_price:.2f} руб.")
+if additional_messages_price > 0:
+    print(f"Сумма за дополнительные сообщения: {additional_messages_price:.2f} руб.")
+print(f"Сумма отчислений кол-центрам 911: {emergency_tax:.2f} руб.")
+print(f"Налог: {tax_amount:.2f} руб.")
+print(f"Итого к оплате: {total_price + tax_amount:.2f} руб.")

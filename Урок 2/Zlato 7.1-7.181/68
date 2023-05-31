@@ -1,0 +1,8 @@
+nums = []
+while True:
+  num = int(input("Введите следующее число последовательности: "))
+  nums.append(num)
+  if num != nums[0]:
+    break
+count_equal_to_first = len(nums) - 1
+print("Количество чисел, равных первому числу последовательности:", count_equal_to_first)

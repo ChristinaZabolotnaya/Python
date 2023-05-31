@@ -1,0 +1,8 @@
+teams = []
+n = int(input("Введите количество команд: "))
+for i in range(n):
+  wins = int(input(f"Введите количество побед команды {i+1}: "))
+  losses = int(input(f"Введите количество поражений команды {i+1}: "))
+  teams.append((wins, losses))
+count_more_wins = sum(1 for team in teams if team[0] > team[1])
+print("Количество команд с большим количеством побед, чем поражений:", count_more_wins)

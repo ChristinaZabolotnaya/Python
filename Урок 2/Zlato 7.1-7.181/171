@@ -1,0 +1,14 @@
+n = int(input("Введите количество чисел: "))
+numbers = list(map(int, input("Введите числа: ").split()))
+
+# а)
+max1 = max(numbers)
+numbers.remove(max1)
+max2 = max(numbers)
+print(f"Два максимальных элемента последовательности: {max1} и {max2}")
+
+# б)
+min1 = min(numbers)
+numbers.remove(min1)
+min2 = min(numbers)
+print(f"Два минимальных элемента последовательности: {min1} и {min2}")

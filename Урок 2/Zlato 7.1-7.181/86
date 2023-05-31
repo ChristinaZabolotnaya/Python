@@ -1,0 +1,9 @@
+p = int(input("Введите количество чисел: "))
+c = []
+for i in range(p):
+  c.append(int(input(f"Введите число c{i+1}: ")))
+count_less_20 = sum(1 for num in c if num < 20)
+if count_less_20 == 5:
+  print("Количество чисел, меньших 20, равно пяти")
+else:
+  print("Количество чисел, меньших 20, не равно пяти")

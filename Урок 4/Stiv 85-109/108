@@ -1,0 +1,45 @@
+def convertMeasure(amount, unit):
+    if unit == "cup":
+        cups = amount
+        tablespoons = cups * 16
+        teaspoons = tablespoons * 3
+    elif unit == "tablespoon":
+        tablespoons = amount
+        cups = tablespoons / 16
+        teaspoons = tablespoons * 3
+    elif unit == "teaspoon":
+        teaspoons = amount
+        tablespoons = teaspoons / 3
+        cups = tablespoons / 16
+    
+    cups = round(cups)
+    tablespoons = round(tablespoons)
+    teaspoons = round(teaspoons)
+    
+    output = ""
+    if cups > 0:
+        output += f"{cups} cup"
+        if cups > 1:
+            output += "s"
+    if tablespoons > 0:
+        if output != "":
+            output += ", "
+        output += f"{tablespoons} tablespoon"
+        if tablespoons > 1:
+            output += "s"
+    if teaspoons > 0:
+        if output != "":
+            output += ", "
+        output += f"{teaspoons} teaspoon"
+        if teaspoons > 1:
+            output += "s"
+    
+    return output
+
+if __name__ == "__main__":
+    amount = int(input("Enter the amount: "))
+    unit = input("Enter the unit (cup/tablespoon/teaspoon): ")
+    
+    converted = convertMeasure(amount, unit)
+    
+    print(f"Converted measurement: {converted}")

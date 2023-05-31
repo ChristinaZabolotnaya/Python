@@ -1,0 +1,23 @@
+m = int(input())
+n = int(input())
+if n == 1:
+  if m == 1:
+    prev_month = 12
+    prev_day = 31
+  else:
+    prev_month = m - 1
+    prev_day = 31
+else:
+  prev_month = m
+  prev_day = n - 1
+if n == 30 and m == 4 or m == 6 or m == 9 or m == 11:
+  next_month = m + 1
+  next_day = 1
+elif n == 31 and m == 12:
+  next_month = 1
+  next_day = 1
+else:
+  next_month = m
+  next_day = n + 1
+print("Предыдущий день:", prev_day, prev_month)
+print("Следующий день:", next_day, next_month)

@@ -1,0 +1,56 @@
+# a) 
+a, b, c, d, e, f = map(int, input().split())
+if a == e or b == f:
+  can_move = True
+  if a == c:
+    for i in range(min(b, f)+1, max(b, f)):
+      if (a, i) != (e, f) and (a, i) != (c, d):
+        can_move = False
+        break
+  elif b == d:
+    for i in range(min(a, e)+1, max(a, e)):
+      if (i, b) != (e, f) and (i, b) != (c, d):
+        can_move = False
+        break
+  else:
+    can_move = False
+else:
+  can_move = False
+if can_move:
+  print("Белая ладья может пойти на поле (", e, ",", f, ") без угрозы черной ладьи")
+else:
+  print("Белая ладья не может пойти на поле (", e, ",", f, ") без под удар черной ладьи")
+# b) ладья и ферзь:
+a, b, c, d, e, f = map(int, input().split())
+
+if a == e or b == f or abs(a-e) == abs(b-f):
+  can_move = True
+  if a == c:
+    for i in range(min(b, f)+1, max(b, f)):
+      if (a, i) != (e, f) and (a, i) != (c, d):
+        can_move = False
+        break
+  elif b == d:
+    for i in range(min(a, e)+1, max(a, e)):
+      if (i, b) != (e, f) and (i, b) != (c, d):
+        can_move = False
+        break
+  elif abs(a-c) == abs(b-d):
+    if a < e:
+      for i in range(a+1, e):
+        if (i, b+(i-a)) != (e, f) and (i, b+(i-a)) != (c, d):
+          can_move = False
+          break
+    else:
+      for i in range(e+1, a):
+        if (i, b+(a-i)) != (e, f) and (i, b+(a-i)) != (c, d):
+          can_move = False
+          break
+  else:
+    can_move = False
+else:
+  can_move = False
+if can_move:
+  print("Белая ладья может пойти на поле (", e, ",", f, ") без угрозы черной ферзи")
+else:
+  print("Белая ладья не может пойти на поле (", e, ",", f, ") без под удар черной ферзи")

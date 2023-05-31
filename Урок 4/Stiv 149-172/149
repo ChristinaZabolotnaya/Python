@@ -1,0 +1,14 @@
+import sys
+
+if len(sys.argv) < 2:
+    print("Error: no file specified")
+else:
+    try:
+        with open(sys.argv[1], "r") as file:
+            for i in range(10):
+                line = file.readline()
+                if line == "":
+                    break
+                print(line, end="")
+    except FileNotFoundError:
+        print("Error: file not found")

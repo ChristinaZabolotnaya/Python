@@ -1,0 +1,16 @@
+p = int(input("Введите натуральное число p: "))
+sequence = []
+for i in range(p):
+  sequence.append(int(input(f"Введите число a{i+1}: ")))
+last_index = None
+first_index = None
+for i in range(p-1, -1, -1):
+  if sequence[i] == 10:
+    last_index = i+1
+    break
+for i in range(p):
+  if sequence[i] == 10:
+    first_index = i+1
+    break
+print(f"Номер последнего числа, равного 10: {last_index}")
+print(f"Номер первого числа, равного 10: {first_index}")

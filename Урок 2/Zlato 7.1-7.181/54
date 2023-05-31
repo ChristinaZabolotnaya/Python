@@ -1,0 +1,12 @@
+n = int(input("Введите количество чисел: "))
+numbers = []
+for i in range(n):
+  number = float(input(f"Введите число {i+1}: "))
+  numbers.append(number)
+sum_gt_20_5 = sum(number for number in numbers if number > 20.5)
+print("Сумма чисел, больших 20.5:", sum_gt_20_5)
+p = float(input("Введите число p: "))
+if sum_gt_20_5 < p:
+  print("Сумма чисел, больших 20.5, меньше p")
+else:
+  print("Сумма чисел, больших 20.5, не меньше p")

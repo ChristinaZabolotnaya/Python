@@ -1,0 +1,24 @@
+n = int(input("Введите количество пар чисел: "))
+pairs = []
+for i in range(n):
+  a, b = map(int, input(f"Введите пару чисел {i+1}: ").split())
+  pairs.append((a,b))
+
+# а)
+max_mean = max(sum(pair)/2 for pair in pairs)
+last_max_index = None
+for i in range(n-1, -1, -1):
+  if sum(pairs[i])/2 == max_mean:
+    last_max_index = i
+    break
+print(f"Среднее арифметическое максимально в паре {last_max_index+1}")
+
+# б)
+from math import sqrt
+min_geom_mean = min(sqrt(pair[0]*pair[1]) for pair in pairs)
+first_min_index = None
+for i in range(n):
+  if sqrt(pairs[i][0]*pairs[i][1]) == min_geom_mean:
+    first_min_index = i
+    break
+print(f"Среднее геометрическое минимально в паре {first_min_index+1}")

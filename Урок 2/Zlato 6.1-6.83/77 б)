@@ -1,0 +1,14 @@
+n = int(input("Введите натуральное число: "))
+has_adjacent_digits = False
+prev_digit = n % 10
+while n > 0:
+  digit = n % 10
+  if digit == prev_digit:
+    has_adjacent_digits = True
+    break
+  prev_digit = digit
+  n //= 10
+if has_adjacent_digits:
+  print("Число содержит две одинаковые цифры, стоящие рядом")
+else:
+  print("Число не содержит две одинаковые цифры, стоящие рядом")

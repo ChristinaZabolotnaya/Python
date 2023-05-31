@@ -1,0 +1,8 @@
+car_number = input("Введите номерной знак машины: ")
+
+if len(car_number) == 6 and car_number[:3].isupper() and car_number[3:].isdigit():
+    print("Данный номер соответствует старому формату")
+elif len(car_number) == 7 and car_number[:4].isdigit() and car_number[4:].isupper():
+    print("Данный номер соответствует новому формату")
+else:
+    print("Данный номер не соответствует ни одному из двух форматов")

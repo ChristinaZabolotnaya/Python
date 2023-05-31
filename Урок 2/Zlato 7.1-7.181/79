@@ -1,0 +1,10 @@
+n = int(input("Введите количество игр: "))
+points = []
+for i in range(n):
+  points.append(int(input(f"Введите количество очков за игру {i+1}: ")))
+count_wins = points.count(3)
+count_losses = points.count(0)
+count_draws = points.count(1)
+print("Количество выигрышей:", count_wins)
+print("Количество проигрышей:", count_losses)
+print("Количество ничьих:", count_draws)

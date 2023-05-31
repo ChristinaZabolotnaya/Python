@@ -1,0 +1,7 @@
+p = int(input("Введите натуральное число: "))
+numbers = []
+for i in range(p):
+  number = float(input("Введите вещественное число: "))
+  numbers.append(number)
+average = sum(numbers) / len(numbers)
+print("Среднее арифметическое вещественных чисел:", average)

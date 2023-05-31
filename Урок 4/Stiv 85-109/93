@@ -1,0 +1,13 @@
+def center_string(s, w):
+    if len(s) >= w:
+        return s
+    else:
+        spaces = (w - len(s)) // 2
+        return " " * spaces + s
+
+s = input("Enter a string: ")
+width = int(input("Enter the width of the window: "))
+
+centered_string = center_string(s, width)
+
+print(centered_string)

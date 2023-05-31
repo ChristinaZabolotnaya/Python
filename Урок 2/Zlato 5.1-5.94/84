@@ -1,0 +1,4 @@
+sum_even = 0
+for i in range(100, 1000, 2):
+  sum_even += i
+print(sum_even)

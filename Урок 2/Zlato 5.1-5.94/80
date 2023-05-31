@@ -1,0 +1,5 @@
+p = int(input("Введите число p: "))
+n = int(input("Введите число n: "))
+for i in range(10, 100):
+  if i % p == 0 or str(n) in str(i):
+    print(i)

@@ -1,0 +1,11 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+n = int(input("Введите число: "))
+co_primes = []
+for i in range(1, n):
+    if gcd(i, n) == 1:
+        co_primes.append(i)
+print("Взаимно простые числа:", co_primes)

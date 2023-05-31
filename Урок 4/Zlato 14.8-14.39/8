@@ -1,0 +1,15 @@
+def triangle_perimeter(a, b, c):
+    return a + b + c
+def triangle_area(a, b, c):
+    s = (a + b + c) / 2
+    return (s * (s-a) * (s-b) * (s-c)) ** 0.5
+a1 = float(input("Введите сторону a1: "))
+b1 = float(input("Введите сторону b1: "))
+c1 = float(input("Введите сторону c1: "))
+a2 = float(input("Введите сторону a2: "))
+b2 = float(input("Введите сторону b2: "))
+c2 = float(input("Введите сторону c2: "))
+perimeter_sum = triangle_perimeter(a1, b1, c1) + triangle_perimeter(a2, b2, c2)
+area_sum = triangle_area(a1, b1, c1) + triangle_area(a2, b2, c2)
+print("Сумма периметров:", perimeter_sum)
+print("Сумма площадей:", area_sum)

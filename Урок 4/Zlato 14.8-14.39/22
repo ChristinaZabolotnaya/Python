@@ -1,0 +1,14 @@
+def is_power_of_five(num):
+    while num % 5 == 0:
+        num //= 5
+    return num == 1
+
+n = int(input("Введите натуральное число n: "))
+a = [int(i) for i in input("Введите последовательность a: ").split()]
+
+count = 0
+for num in a:
+    if is_power_of_five(num):
+        count += 1
+
+print("Количество степеней пятерки:", count)

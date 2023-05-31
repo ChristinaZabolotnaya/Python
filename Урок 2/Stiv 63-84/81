@@ -1,0 +1,5 @@
+binary = input("Введите число в двоичном виде: ")
+decimal = 0
+for i in range(len(binary)):
+    decimal += int(binary[i]) * 2**(len(binary)-i-1)
+print(f"Число {binary} в десятичном виде: {decimal}")

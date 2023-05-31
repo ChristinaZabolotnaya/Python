@@ -1,0 +1,10 @@
+a = float(input("Введите число a: "))
+x = float(input("Введите число x: "))
+e = float(input("Введите число e: "))
+y_prev = a/2
+for i in range(2, 100):
+    y = 1/2 * (y_prev + x/(y_prev - 1))
+    if abs(y**2 - y_prev**2) < e:
+        print("Первый член уn, удовлетворяющий неравенству:", y)
+        break
+    y_prev = y

@@ -1,0 +1,8 @@
+a = float(input("Введите число a: "))
+n = 2
+while True:
+    num = 1 + 1/n
+    if num < a:
+        print(n)
+        break
+    n += 1

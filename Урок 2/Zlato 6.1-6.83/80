@@ -1,0 +1,14 @@
+n = int(input("Введите натуральное число: "))
+sorted_ascending = True
+digits = []
+while n > 0:
+  digits.append(n % 10)
+  n //= 10
+for i in range(len(digits)-1):
+  if digits[i] < digits[i+1]:
+    sorted_ascending = False
+    break
+if sorted_ascending:
+  print("Последовательность цифр упорядочена по возрастанию при просмотре слева направо")
+else:
+  print("Последовательность цифр не упорядочена по возрастанию при просмотре слева направо")

@@ -1,0 +1,5 @@
+for bulls in range(11):
+    for cows in range(21):
+        calves = 100 - bulls - cows
+        if 10 * bulls + 5 * cows + 0.5 * calves == 100 and calves >= 0:
+            print(bulls, cows, calves)
